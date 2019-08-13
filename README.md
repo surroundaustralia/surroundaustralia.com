@@ -9,7 +9,12 @@ Potential website structure being trialled here in outline
             * [Video](sop-video.md)
             * [Details](sop-details.md)
     * Services
+    * Research
+        * Internet Standards
+        * Semantic Data Management
+        * AI
     * Clients
+        * Current Projects
         * Testemonials
     * Partners
     * About Us
@@ -19,3 +24,6 @@ Potential website structure being trialled here in outline
     * Contact
         - Form
         - Addresses
+
+**Research** . 
+Since SURROUND is an R&D-heavy company, it makes sense to advertise our research right at the top level alongside products
