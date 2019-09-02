@@ -25,5 +25,5 @@ Potential website structure being trialled here in outline
         - Form
         - Addresses
 
-**Research** . 
+**Research**  
 Since SURROUND is an R&D-heavy company, it makes sense to advertise our research right at the top level alongside products
