@@ -12,8 +12,8 @@ Potential website structure being trialled here in outline
     * Research
         * Internet Standards
         * Semantic Data Management
-        * AI
-    * Clients
+        * eXplainable AI
+    * Customers
         * Current Projects
         * Testemonials
     * Partners
