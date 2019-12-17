@@ -1,0 +1,5 @@
+# new site
+jekyll new . --force
+
+# to serve locally
+bundle exec jekyll serve

@@ -1,0 +1,11 @@
+title: SURROUND Australia Pty Ltd
+email: nicholas.car@surroundaustralia.com
+description: 
+  SURROUND Australia's website'
+baseurl: "/"
+url: "https://surroundaustralia.com"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
