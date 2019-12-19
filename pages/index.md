@@ -18,16 +18,16 @@ SURROUND uses modern semantic data tools to solve complex knowledge problems so 
 ## PRODUCTS
 SURROUND maintains a series of products on top of platforms we've developed over many years as well as industry-best platforms supported by our partners.
 
-# WHO WE WORK WITH
+## WHO WE WORK WITH
 We work with Federal, State, and Territory Governments, Government Business Enterprises and Statutory Authorities, and private businesses. 
 
 Our clients include the Australian Capital Territory Government, the Department of Social Services, and the Department of Human Services.
 
-![](images/logo-actgov.webp)
-![](images/logo-dhs.webp)
-![](images/logo-dss.webp)
-![](images/logo-gsq.webp)
-![](images/logo-naa.ong)
+<img src="images/logo-actgov.webp" style="height:80px;" /><br />
+<img src="images/logo-dhs.png" style="height:100px;" /><br />
+<img src="images/logo-dss.png" style="height:100px;" /><br />
+<img src="images/logo-gsq.webp" style="height:100px;" /><br />
+<img src="images/logo-naa.png" style="height:75px;" /><br />
 
 ## ABOUT US
 In 2006, SURROUND's three founders (Brad McCusker, Michael D'Aprix, and Marcus Jowsey) set out to transform the way government works. The team has worked together over many years to develop solutions to the hurdles governments face when accessing, analysing, and managing their knowledge base.
