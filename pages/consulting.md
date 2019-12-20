@@ -43,7 +43,7 @@ Please see our [Products](/products):
 <div class="gcontentitems">
     <div style="grid-column:1;">
         <a href="/sop">
-            <img src="images/icon-sop.webp" alt="SOP Icon" style="height:100px;" />
+            <img src="images/icon-sop.png" alt="SOP Icon" style="height:100px;" />
         </a>
         <p>SURROUND Ontology Platform</p>
     </div>

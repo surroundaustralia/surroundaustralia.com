@@ -51,7 +51,7 @@ These products are all supported by the [SURROUND Ontology Platform (SOP)](/sop)
 
 <div style="text-align:center;">
     <a href="/sop">
-        <img src="images/icon-sop.webp" alt="SOP Icon" style="height:200px;" />
+        <img src="images/icon-sop.png" alt="SOP Icon" style="height:200px;" />
     </a>
     <p>SURROUND Ontology Platform</p>
 </div>
