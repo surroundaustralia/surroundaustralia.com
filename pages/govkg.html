@@ -1,0 +1,95 @@
+---
+layout: page
+title: "GovKG"
+permalink: /govkg
+---
+<img src="images/icon-govkg.png" alt="GovKG icon" style="height:125px; float:right;" />
+<h1>Gov Knowledge Graph</h1>
+<p>GovKG is a data product built and managed by SURROUND. It contains a series of datasets of information about government; its structure, the functions it performs and capacity.</p>
+<h4 style="font-style:italic;">Which government?</h4>
+<p>GovKG started with Australian federal government data but, since it's an estansible kowledge graph, its being extended to include Australian state information, local council info and New Zealand government info. It also includes several international datastats of government function needed to match Australian (or NZ) functions with those listed by the OECD &amp; UN.</p>
+
+<style>
+    .gcontentitems {
+        display: grid;
+    }
+
+    .gcontentitems > div {
+        align-self: center; 
+        text-align: justify;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        padding: 30px;
+    }
+</style>
+<div class="gcontentitems">
+    <div>
+        <div style="grid-column:1; text-align: center;">
+            <h3>Overview</h3>
+            <img src="images/govkg-themes.png" alt="GovKG themes" style="height:350px;" />
+        </div>
+        <div style="grid-column:2;">
+            <h4>Types</h4>
+            <p>GovKG includes a number of graph datasets about:</p>
+            <ul>
+                <li>
+                    government structure
+                    <ul>
+                        <li>including changes over time!</li>
+                    </ul>
+                </li>
+                <li>functions of government</li>
+                <li>capabilities of government personnel</li>
+                <li>crosswalks between structure &amp; functions and different function lists</li>
+            </ul>
+            <h4>What we've done</h4>
+            <p>We've ingested a number of well-used datasets (see below) and 'up-skilled' them by defining formal data models for them which include data definitions and links to other defined data.</p>
+        </div> 
+    </div>
+    <div style="background-color:rgb(238, 238, 238);">
+        <div style="grid-column:1;">
+            <p>GovKG's list of datasets grows all the time as we are constantly adding to it but here's a relatively up-to-date list.</p>
+            <style>
+                ol.bigger li {
+                    line-height: 2em;
+                    margin-top: 20px;
+                }
+            </style>
+            <ol class="bigger">
+                <li>
+                    <strong>Australian Government Organisations Register</strong><br />
+                    - a database from the Australian <a href="https://www.finance.gov.au">Department of Finance</a> that "provides information on the function, composition, origins and other details of 1,277 Australian Government entities and bodies"<sup><a href="https://www.finance.gov.au/government/managing-commonwealth-resources/structure-australian-government-public-sector/australian-government-organisations-register"><img src="images/external-link-ltr-icon.svg" /></a></sup>.
+                </li>
+                <li>
+                    <strong>Australian Adiminstrative Arrangement Orders</strong><br /> 
+                    - the list of <em>portfolios</em> of (federal) government and the various <em>matters</em> that they handle. This is the complete dataset with changes from Federation (1901) until the present day.
+                    <br />
+                    - this dataset was originally assembled by <a href="https://www.csiro.au"></a>CSIRO</a> during 2018/2019 and has been extended by SURROUND
+                </li>
+                <li>
+                    <strong>Portfolio Budget Statements</strong><br />
+                    - the database of the collected Portfolio Budget Statements issued for Australian federal government, over time.
+                </li>                    
+                <li>
+                    <strong>Commonwealth Records Series database</strong><br />
+                    - the database of Federal government agencies used by the <a href="http://www.naa.gov.au">National Archives of Australia</a> to identify government record producers over time
+                </li>
+                <li>
+                    <strong>Functional Taxonomies</strong><br />
+                    - 7 taxonomic classifications of the functions of government in use in Australia<br />
+                    - includes international taxonomies, such as COFOG, for mapping Australian government functions to international systems, such as the UN statistics division's reporting
+                </li>
+                <li>
+                    <strong>Financial Figures</strong><br />
+                    - Financial figures for multiple Australian federal government departments from 2017+.
+                </li>                            
+            </ol>            
+        </div>
+        <div style="grid-column:2; text-align: center;">
+            <h3>Datasets</h3>
+            <img src="images/govkg-datasets.png" alt="GovKG themes" style="height:150px;" />
+        </div> 
+    </div>
+    <h3 style="text-align:center;">Details about how to access this product will be provided here shortly!</h3>
+</div>
