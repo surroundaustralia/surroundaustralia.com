@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "Technology"
-permalink: /technology
+permalink: /tech
 ---
 # Technology

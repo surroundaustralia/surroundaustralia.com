@@ -1,5 +1,10 @@
-# SOP Home
-## Page Content Outline
+---
+layout: page
+title: "SOP"
+permalink: /sop
+---
+# Surround Ontology Platform
+
 * product visual branding
   * logo
   * screenshop promotional image

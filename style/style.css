@@ -1,6 +1,8 @@
 body {
     text-align: center;
     line-height: 1.5em;
+    background-image: url("/images/corner2.png");
+    background-size: cover;
 }
 
 #widther {
@@ -11,8 +13,10 @@ body {
 
 footer {
     border-top: solid 1px rgb(38, 51, 122);
-    font-size: small;
+    font-size: large;
     background-color: rgb(238, 238, 238);
+    min-height:50px;
+    padding: 1em;
 }
 
 h1, h2, h3, h4 {
@@ -34,7 +38,7 @@ h2 > sup {
 }
 
 h1 {
-        color: rgb(38, 51, 122);
+    color: rgb(38, 51, 122);
 }
 
 h4 {
@@ -92,12 +96,6 @@ table.layout th {
     font-family: sans-serif;
 }
 
-table.layout tr:nth-child(odd) {
-}
-table.layout tr:nth-child(even) {
-    background-color: #ddd;
-}
-
 .query {
     float:right;
     margin-top: -200px;
@@ -116,3 +114,38 @@ table.layout tr:nth-child(even) {
 /* Red       rgb(182, 46, 51) */
 /* Purple    rgb(87, 36, 90) */
 /* Blue      rgb(36, 47, 115) */
+
+#header-content {
+    background-color: white;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container td {
+    padding: 5px;
+ }
+#surround-logo {
+    height: 100px;
+}
+#surround-title {
+    color: rgb(50, 50, 50); 
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#main-menu {
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+#slogan {
+    color: rgb(182, 46, 51);
+    font-weight: bold;
+    /*font-style: italic;*/
+    font-size: 2em;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    padding: 50px;
+}

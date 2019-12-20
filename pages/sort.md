@@ -3,4 +3,65 @@ layout: page
 title: "SORT"
 permalink: /sort
 ---
-# SORT Robot
+<img src="images/icon-sort.png" alt="SORT icon" style="height:200px; float:right; background-color:white;" />
+<h1>SORT Robot<h1>
+<h3>SURROUND Ontology-powered Records Triage Robot</h3>
+
+<style>
+    a.pr {
+        text-decoration: none;
+        color:white;
+    }
+    a.pr:hover {
+        text-decoration: underline;
+    }
+</style>
+<div style="background-color:rgb(182, 46, 51); padding:30px; text-align:center; margin-top:50px;">
+    <h3><a href="files/SORT.pdf" class="pr">See the SORT Press Release, Oct 2019</a></h3>
+</div>
+
+<style>
+    .gcontentitems {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        border:solid 1px red;
+    }
+</style>
+<div class="gcontentitems">
+    <div style="grid-column:1;">
+        <h3>What does SORT do?</h3>
+    <div>
+    <div style="grid-column:2;">
+        <p>
+            All organisations now rely on huge and massively-increasing volumes of electronic records that cannot be effectively assessed and classified via manual processes.
+        ​</p>
+        <p>
+            The SORT Robot effectively triages electronic records, aids record discoverability, and decreases operational expenditure through the ability to near-fully automate what is currently a manual task.
+        </p>
+        <p>
+            SORT has been designed to automate electronic record triaging processes smoothly, accurately, and accountably. SORT auto-classifies and sentences electronic records deemed to be of significance, using a powerful situational awareness capability for determining the context of the document, and therefore the appropriate actions required for retention or disposal. Based on its enhancements to electronic records, SORT supports improved record discoverability and faceted searching.
+        </p>
+        <p>
+            Auto-classification outcome accuracy is measurable, consistent, auditable, and comparable with manual sentencing practices. SORT provides a human-readable explanation for each assessment action.
+        </p>
+        <p>
+            Dashboards provide visibility of auto-classification events, which are aggregated to provide a wide range of KPIs connecting organisational strategy to business outcomes.
+        </p>
+    </div>
+</div>
+
+
+
+### How does it work?
+The SORT Robot uses a combination of advanced artificial intelligence, semantics, and machine learning techniques to:
+
+* Convert electronic record triaging criteria into machine-readable, executable rules which are used to auto-classify electronic records.
+* Automate record classification and support record discovery using tagging, faceted search, topic mapping, contextual analysis, deep semantic analysis, machine learning techniques, and other techniques, within an extensible, re-configurable framework.
+* Incorporate feedback on auto-classification results to improve classification methods, and the classification process as a whole. SORT learns the experienced judgments of professional archivists, increase accuracy over time.
+
+### Technology base
+SURROUND has built the SORT Robot capability as a flexible, extensible, and configurable application, a platform with proven scalability: the SURROUND Ontology Platform (SOP). The SOP uses a World Wide Web Consortium (W3C) standard, Resource Description Framework (RDF) graphs, as its base information representation. The SOP is constructed from a suite of components, which have been flexibly combined to create a coherent knowledge graph of triaging rules, record context, and record instances within SORT. Workflows help archivists optimise the application of rules, and the assimilation of knowledge and automated processes to improve the SORT Robot’s performance over time. The technology base and methods used by SORT enable significantly improved performance to those achieved by existing electronic record auto-classification systems.
+
+Please email <info@surroundaustralia.com> to arrange a demo or further information.

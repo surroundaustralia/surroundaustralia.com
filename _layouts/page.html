@@ -1,35 +1,201 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>SURROUND Australia Pty Ltd</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet">
-</head>
-<body>
-    <div id="widther">
-        <div id="header">
-            <div id="title" style="float:left;">
-                <a href="https://surroundaustralia.com"></a><img src="images/SURROUND-logo.png" alt="Club logo" style="height:100px;" /></a>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>SURROUND Australia Pty Ltd</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Lato;
+                background-image: url("/images/corner2.png");
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+                color:rgb(50, 50, 50);
+            }
+
+            h1, h2, h3, h4 {
+                font-family: Lato;
+                font-weight: 900;
+            }
+
+            h1 {
+                font-size: 60px;
+                color: rgb(38, 51, 122);
+            }
+
+            h2 {
+                font-size: 40px;;
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            #gpagecontainer {
+                display: grid;
+                grid-template-columns: 1fr 1000px 1fr;
+                grid-template-rows: 100px auto 1fr;
+                grid-template-areas: 
+                    "header header header"
+                    ". content ."
+                    "footer footer footer";
+            }
+            #gitem-header {
+                grid-area: header;
+                display: grid;
+                grid-template-columns: 1fr 110px 390px 500px 1fr;
+                align-items: center;                
+            }
+            #nav > a {
+                color:rgb(100, 100, 100);
+                text-decoration: none;                
+                margin-right: 10px;
+            }
+            #gitem-content {
+                grid-area: content;
+            }
+            #gitem-footer {
+                grid-area: footer;
+                display: grid;
+                grid-template-columns: 1fr 500px 500px 1fr;
+                border-top: solid 1px rgb(38, 51, 122);
+                background-color: rgb(238, 238, 238);
+                padding: 20px;
+            }
+
+            #gitem-footer a {
+                color:rgb(100, 100, 100);
+            }
+
+            #nav-container {
+            margin: 0 auto;
+            }
+        
+            nav {
+                margin: 35px 0;
+            }
+            nav ul {
+                padding: 0;
+                    margin: 0;
+                list-style: none;
+                position: relative;
+            }	
+            nav ul li {
+                display:inline-block;
+            }
+            nav a {
+                display:block;
+                padding:0 10px;	
+                /*color:rgb(50, 50, 50);*/
+                color:rgb(100, 100, 100);
+                line-height: 30px;
+                text-decoration:none;
+            }
+            nav a:hover { 
+                color: rgb(38, 51, 122);
+            }
+            nav ul ul {
+                display: none;
+                position: absolute; 
+                top: 30px; 	
+            }	
+            nav ul li:hover > ul {
+                display:inherit;
+            }	
+            nav ul ul li {
+                width:230px;
+                float:none;
+                display:list-item;
+                position: relative;
+            }
+            nav ul ul ul li {
+                position: relative;
+                top:-60px; 
+                left:230px;
+            }
+            li > a:only-child:after { content: ''; }  
+        </style>
+        <div id="gpagecontainer">
+            <div id="gitem-header">
+                <div style="grid-column:2;">
+                    <a href="https://surroundaustralia.com">
+                        <img id="surround-logo" src="images/SURROUND-logo.png" alt="SURROUND logo" style="height: 100px;" />
+                    </a>
+                </div>
+                <div style="grid-column:3;">
+                    <style>
+                        #company-title-s {
+                            color: rgb(50, 50, 50); 
+                            font-size: 35px;
+                            font-weight: 800;
+                            text-decoration: none;
+                        }
+                        #company-title-a {
+                            color: rgb(100, 100, 100); 
+                            font-size: 35px;
+                            font-weight: bold;
+                            text-decoration: none;
+                        }
+                    </style>
+                    <a id="company-title-s" href="https://surroundaustralia.com">
+                        SURROUND
+                    </a>
+                    <a id="company-title-a" href="https://surroundaustralia.com">
+                        Australia
+                    </a>
+                </div>
+                <div style="grid-column:4;" id="nav-container" >
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/solutions">Solutions</a>
+                                <ul>
+                                    <li><a href="/consulting">Consulting</a></li>
+                                    <li><a href="/casestudies">Case Studies</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/products">Products</a>
+                                <ul>
+                                    <li><a href="/sort">SORT Robot</a></li>
+                                    <li><a href="/govkg">GovKG</a></li>
+                                    <li><a href="/acbt">ACBT</a></li>
+                                    <li><a href="/sop">SOP</a></li>
+                                </ul>
+                            </li>                            
+                            <li>
+                                <a href="/who">Who we work with</a>
+                                <ul>
+                                    <li><a href="/clients">Clients</a></li>
+                                    <li><a href="/partners">Partners</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/tech">Technology</a>
+                                <ul>
+                                    <li><a href="/consulting">Consulting</a></li>
+                                    <li><a href="/sop">SOP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div style="float:right;">
-                <a href="/">Home</a> |
-                <a href="/solutions">Solutions</a> |
-                <a href="/products">Products</a> |
-                <a href="/technology">Technology</a> |
-                <a href="/who">Who we work with</a> |
-                <a href="/about">About</a>         
+            <div id="gitem-content">
+                {{ content }}
             </div>
-            <div style="clear:both;"></div>
+            <div id="gitem-footer">
+                <div style="grid-column:2; justify-self: left;">
+                    &copy; <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd, 2020</a>
+                </div>
+                <div style="grid-column:3; justify-self: right;">
+                    <a href="/about">About</a> | <a href="/contact">Contact Us</a>
+                </div>
+            </div>
         </div>
-        <div id="container-content">
-            {{ content }}
-        </div>
-        <footer>
-            <p>
-                &copy; <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a>, 2020&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact">Contact Us
-            </p>
-        </footer>
-    </div>
-</body>
+    </body>
 </html>
