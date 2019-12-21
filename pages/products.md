@@ -22,19 +22,19 @@ Over years we've developed a series of tools to asssit with the production and m
 </style>
 <div class="gcontentitems">
     <div style="grid-column:1;">
-        <a href="/sop">
+        <a href="/govkg">
             <img src="images/icon-govkg.png" alt="GovKG Icon" style="height:100px;" />
         </a>
         <p>Gov Knowledge Graph</p>
     </div>
     <div style="grid-column:2;">
-        <a href="/sop">
+        <a href="/sort">
             <img src="images/icon-sort.png" alt="SORT Icon" style="height:100px;" />
         </a>
         <p>SORT Robot</p>
     </div>
     <div style="grid-column:3;">
-        <a href="/sop">
+        <a href="/acbt">
             <img src="images/icon-acbt.png" alt="ACBT Icon" style="height:100px;" />
         </a>
         <p>ACBT</p>

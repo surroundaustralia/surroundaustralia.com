@@ -1,0 +1,18 @@
+# build site
+bundle exec jekyll serve
+
+# go to it 
+cd _site
+
+# zip it
+tar -cf pages.tar *.html
+
+# ship it
+scp pages.tar kurrawong.net:/home/ubuntu
+
+
+# new site
+jekyll new . --force
+
+# to serve locally
+bundle exec jekyll serve
