@@ -17,4 +17,7 @@ Currently, public sector agencies struggle to manage change in a complex, inter-
 ### Savings
 Not only do we provide business intelligence and integration tools, our unique product suite will allow agencies to realise significant savings while increasing existing capabilities.
 
+### Revenue
+As knowledge is linked and governed in the enterprise knowledge graph the ability to navigate liked knowledge is realised. New views and new observer viewpoints expose opportunity for new revenue models. The ability to link external knowledge to enterprise knowledge delivers new contextual views and broadens understanding of the marketplace.
+
 ### Please see our [Consulting page](/consulting) for a description of the services we provice and [Case Studies](/casestudies) for examples of what we have already done.
