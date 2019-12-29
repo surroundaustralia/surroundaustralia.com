@@ -49,13 +49,13 @@
             #gpagecontainer {
                 display: grid;
                 grid-template-columns: 1fr 1000px 1fr;
-                grid-template-rows: 100px auto 1fr;
+                grid-template-rows: 100px auto auto;
                 grid-template-areas: 
                     "header header header"
                     ". content ."
                     "footer footer footer";
             }
-            #gitem-header {
+            #header {
                 grid-area: header;
                 display: grid;
                 grid-template-columns: 1fr 110px 390px 500px 1fr;
@@ -66,10 +66,10 @@
                 text-decoration: none;                
                 margin-right: 10px;
             }
-            #gitem-content {
+            #content {
                 grid-area: content;
             }
-            #gitem-footer {
+            #footer {
                 grid-area: footer;
                 display: grid;
                 grid-template-columns: 1fr 500px 500px 1fr;
@@ -78,7 +78,7 @@
                 padding: 20px;
             }
 
-            #gitem-footer a {
+            #footer a {
                 color:rgb(100, 100, 100);
             }
 
@@ -131,7 +131,7 @@
             li > a:only-child:after { content: ''; }  
         </style>
         <div id="gpagecontainer">
-            <div id="gitem-header">
+            <div id="header">
                 <div style="grid-column:2;">
                     <a href="https://surroundaustralia.com">
                         <img id="surround-logo" src="images/SURROUND-logo.png" alt="SURROUND logo" style="height: 100px;" />
@@ -199,10 +199,10 @@
                     </nav>
                 </div>
             </div>
-            <div id="gitem-content">
+            <div id="content">
                 {{ content }}
             </div>
-            <div id="gitem-footer">
+            <div id="footer">
                 <div style="grid-column:2; justify-self: left;">
                     &copy; <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd, 2020</a>
                 </div>
