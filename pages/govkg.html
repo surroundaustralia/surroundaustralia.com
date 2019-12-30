@@ -5,51 +5,239 @@ permalink: /govkg
 ---
 <img src="images/icon-govkg.png" alt="GovKG icon" style="height:125px; float:right;" />
 <h1>Gov Knowledge Graph</h1>
-<p>GovKG is a data product built and managed by SURROUND. It contains a series of datasets of information about government; its structure, the functions it performs and capacity.</p>
+<p>GovKG is a data product built and managed by SURROUND. It contains multiple pieces of information about government; its structure, the functions it performs and capacity.</p>
+<p>It is a single <em><a href="https://en.wikipedia.org/wiki/Ontology_(information_science)">knowledge graph</a></em> - that is, the data and definitions in it are in the form of a cohesive <em>ontology</em> and all bundled together. In this form, all of its parts can be used together and, since we provide the ability to select individual parts, elements can be included or excluded as desired.</p>
 <h4 style="font-style:italic;">Which government?</h4>
 <p>GovKG started with Australian federal government data but, since it's an estansible kowledge graph, its being extended to include Australian state information, local council info and New Zealand government info. It also includes several international datastats of government function needed to match Australian (or NZ) functions with those listed by the OECD &amp; UN.</p>
 
 <style>
-    .gcontentitems {
+    #usecases {
         display: grid;
+        grid-template-columns: 400px 1fr;        
+        padding: 0 10px 0 10px;
+        background-color:rgb(238, 238, 238);
     }
 
-    .gcontentitems > div {
+    #usecases > div {
         align-self: center; 
         text-align: justify;
+    }
+
+    #contenttypes {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 30px;
-        padding: 30px;
+        grid-template-columns: 400px 1fr;        
+        padding: 0 10px 0 10px;
+    }
+
+    #contenttypes > div {
+        align-self: center; 
+        text-align: justify;
+    }
+
+    #contentitems {
+        display: grid;
+        grid-template-columns: 180px 180px 1fr 180px 180px;
+        grid-column-gap: 18px;
+        grid-template-rows: 40px 75px 100px 75px 150px 75px 75px 75px 10px;
+        grid-row-gap: 18px;
+        margin-top: 20px;
+        padding: 0 10px 0 10px;
+        background-color:rgb(238, 238, 238);
+    }
+
+    #contentitems > .contentitem {
+        align-self: center; 
+        text-align: center;
+        border-radius: 15px;
+        min-height: 100px;
+        color: white;
+        text-decoration:none;
+    }
+    .dataset {
+        border:solid darkred 1px;
+        background-color: rgb(182, 46, 51);
+    }
+    .taxonomy {
+        border:solid darkblue 1px;
+        background-color: rgb(36, 47, 115);
+    }
+    .linkset {
+        border:solid black 1px;
+        background-color: rgb(87, 36, 90);        
+    }
+
+    /* pop-up styling */
+    #mask {
+        position:   absolute;
+        left:       0;
+        top:        0;
+        z-index:    9000;
+        background-color:#000;
+        display:    none;
+    }
+
+    .window {
+        position:   fixed;
+        left:       0;
+        top:        0;
+        width:      900px;
+        min-height: 200px;
+        display:    none;
+        z-index:    9999;
+        padding:    20px;
+        background-color:#ffffff;
+        border-radius: 15px;
+        overflow-y: scroll;
+    }
+
+    .window-links {
+        text-align: center;
+        font-size: smaller;
     }
 </style>
-<div class="gcontentitems">
-    <div>
-        <div style="grid-column:1; text-align: center;">
-            <h3>Overview</h3>
-            <img src="images/govkg-themes.png" alt="GovKG themes" style="height:350px;" />
-        </div>
-        <div style="grid-column:2;">
-            <h4>Types</h4>
-            <p>GovKG includes a number of graph datasets about:</p>
-            <ul>
-                <li>
-                    government structure
-                    <ul>
-                        <li>including changes over time!</li>
-                    </ul>
-                </li>
-                <li>functions of government</li>
-                <li>capabilities of government personnel</li>
-                <li>crosswalks between structure &amp; functions and different function lists</li>
-            </ul>
-            <h4>What we've done</h4>
-            <p>We've ingested a number of well-used datasets (see below) and 'up-skilled' them by defining formal data models for them which include data definitions and links to other defined data.</p>
-        </div> 
+
+<script src="/files/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        //select all the a tag with name equal to modal
+        $('a[name=modal]').click(function(e) {
+            //Cancel the link behavior
+            e.preventDefault();
+
+            //Get the A tag
+            var id = $(this).attr('href');
+
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            //Set height and width to mask to fill up the whole screen
+            $('#mask').css({'width':maskWidth,'height':maskHeight});
+            //transition effect
+            $('#mask').fadeIn(1000);
+            $('#mask').fadeTo("slow",0.8);
+
+            //Get the window height and width
+            var winH = $(window).height();
+            var winW = $(window).width();
+
+            //Set the popup window to center
+            //$(id).css('top',  winH/2-$(id).height()/2);
+            $(id).css('top',  200);
+            $(id).css('left', winW/2-$(id).width()/2);
+
+            //transition effect
+            $(id).fadeIn(2000);
+        });
+
+        //if close button is clicked
+        $('.window .close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+
+            $('#mask').hide();
+            $('.window').hide();
+        });
+
+        //if mask is clicked
+        $('#mask').click(function () {
+            $(this).hide();
+            $('.window').hide();
+        });
+
+        $(window).resize(function () {
+            var box = $('.window');
+
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            //Set height and width to mask to fill up the whole screen
+            $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+            //Get the window height and width
+            var winH = $(window).height();
+            var winW = $(window).width();
+
+            //Set the popup window to center
+            box.css('top',  winH/2 - box.height()/2);
+            box.css('left', winW/2 - box.width()/2);
+        });
+    });
+</script>
+
+<div id="usecases">
+    <div style="grid-row:1; grid-column:1/3; text-align: center;">
+        <h3>Use Cases</h3>
     </div>
+    <div style="grid-row:2; grid-column:2;">
+        <h4>Reapportionment</h4>
+        <p>GovKG can be used to <em>reapportion</em> numerical data, that is, to transform data presented in on structure to another.</p>
+        <p>For example, perhaps you have budgets per department/agency and you wish to <em>reapportion</em> that to see what budgets look like per <em>function</em> of government with functions listed in one of the GovKG vocabularies.</p>
+        <p><strong>GovKG can help you do this almost instantaneously!</strong></p>
+        <h4>Structural Change Modelling</h4>
+        <p>Perhaps you want to estimate what the structural makeup of government would look like after some change to budgets per function, as might occur after a new Administrative Arrangement Order has been issued. This can be done by changing the weights of budgets or staffing levels per function and then converting values from function to structure.</p>
+        <p><strong>GovKG not only includes government structures and functions and links between them but all previousl states of government according to AAOs, back to 1901!</strong></p>
+        <h4>Other Use Cases</h4>
+        <p>We've thought up a series of GovKG Use Cases that are based on our experience with the questions people often ask of government structure and function. Please <a href="/contact">Contact Us</a> if you'd like the full listing.</p>
+    </div>
+    <div style="grid-row:2; grid-column:1;">
+        <img src="images/govkg-reapportionment.png" style="height:165px;" alt="GovKG reapportionment" />
+    </div>
+</div>
+
+<div id="contenttypes">
+    <div style="grid-row:1; grid-column:2;">
+        <h3>Content Types</h3>
+    </div>
+    <div style="grid-row:2; grid-column:1;">
+        <img src="images/govkg-themes.png" style="height:350px;" alt="GovKG themes" />
+    </div>
+    <div style="grid-row:2; grid-column:2;">
+        <h4>Types of data</h4>
+        <p>GovKG includes a number of datasets about:</p>
+        <ul>
+            <li>
+                government structure
+                <ul>
+                    <li>including changes over time!</li>
+                </ul>
+            </li>
+            <li>functions of government</li>
+            <li>capabilities of government personnel</li>
+            <li>crosswalks between structure &amp; functions and different function lists</li>
+        </ul>
+        <h4>SURROUND's additions</h4>
+        <p>We've ingested a number of well-used datasets (see below) and 'up-skilled' them by defining formal data models for them which include data definitions and links to other defined data.</p>
+    </div>
+</div>
+
+<div style="display:none;">
+    <div style="grid-column:1; text-align: center;">
+        <h3>Overview</h3>
+        <img src="images/govkg-themes.png" alt="GovKG themes" style="height:350px; float: left;" />
+    </div>
+    <div style="grid-column:2;">
+        <h4>Types of data</h4>
+        <p>GovKG includes a number of datasets about:</p>
+        <ul>
+            <li>
+                government structure
+                <ul>
+                    <li>including changes over time!</li>
+                </ul>
+            </li>
+            <li>functions of government</li>
+            <li>capabilities of government personnel</li>
+            <li>crosswalks between structure &amp; functions and different function lists</li>
+        </ul>
+        <h4>SURROUND's additions</h4>
+        <p>We've ingested a number of well-used datasets (see below) and 'up-skilled' them by defining formal data models for them which include data definitions and links to other defined data.</p>
+    </div> 
+
     <div style="background-color:rgb(238, 238, 238);">
         <div style="grid-column:1;">
-            <p>GovKG's list of datasets grows all the time as we are constantly adding to it but here's a relatively up-to-date list.</p>
+            <p>GovKG's list of data items grows all the time as we are constantly adding to it but here's a relatively up-to-date list.</p>
             <style>
                 ol.bigger li {
                     line-height: 2em;
@@ -58,38 +246,213 @@ permalink: /govkg
             </style>
             <ol class="bigger">
                 <li>
-                    <strong>Australian Government Organisations Register</strong><br />
+                    <span class="h5">Australian Government Organisations Register</span><br />
                     - a database from the Australian <a href="https://www.finance.gov.au">Department of Finance</a> that "provides information on the function, composition, origins and other details of 1,277 Australian Government entities and bodies"<sup><a href="https://www.finance.gov.au/government/managing-commonwealth-resources/structure-australian-government-public-sector/australian-government-organisations-register"><img src="images/external-link-ltr-icon.svg" /></a></sup>.
                 </li>
                 <li>
-                    <strong>Australian Adiminstrative Arrangement Orders</strong><br /> 
+                    <span class="h5">Australian Adiminstrative Arrangement Orders</span><br /> 
                     - the list of <em>portfolios</em> of (federal) government and the various <em>matters</em> that they handle. This is the complete dataset with changes from Federation (1901) until the present day.
                     <br />
                     - this dataset was originally assembled by <a href="https://www.csiro.au"></a>CSIRO</a> during 2018/2019 and has been extended by SURROUND
                 </li>
                 <li>
-                    <strong>Portfolio Budget Statements</strong><br />
+                    <span class="h5">Portfolio Budget Statements</span><br />
                     - the database of the collected Portfolio Budget Statements issued for Australian federal government, over time.
                 </li>                    
                 <li>
-                    <strong>Commonwealth Records Series database</strong><br />
+                    <span class="h5">Commonwealth Records Series database</span><br />
                     - the database of Federal government agencies used by the <a href="http://www.naa.gov.au">National Archives of Australia</a> to identify government record producers over time
                 </li>
                 <li>
-                    <strong>Functional Taxonomies</strong><br />
+                    <span class="h5">Functional Taxonomies</span><br />
                     - 7 taxonomic classifications of the functions of government in use in Australia<br />
                     - includes international taxonomies, such as COFOG, for mapping Australian government functions to international systems, such as the UN statistics division's reporting
                 </li>
                 <li>
-                    <strong>Financial Figures</strong><br />
+                    <span class="h5">Financial Figures</span><br />
                     - Financial figures for multiple Australian federal government departments from 2017+.
                 </li>                            
             </ol>            
         </div>
         <div style="grid-column:2; text-align: center;">
-            <h3>Datasets</h3>
+            <h3>Contents</h3>
             <img src="images/govkg-datasets.png" alt="GovKG themes" style="height:150px;" />
         </div> 
     </div>
+
     <h3 style="text-align:center;">Details about how to access this product will be provided here shortly!</h3>
+</div>
+
+<div id="contentitems">
+    <div style="grid-row:1; grid-column:2/5; text-align: center;">
+        <h3>Content Items</h3>
+    </div>
+
+    <div style="grid-row:2; grid-column:2/5; text-align: center;">
+        <h4>Structure Datasets</h4>
+    </div>
+    <a href="#agor" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:1;">
+        <p>Australian Government Organisations Register</p>
+    </a>
+    <a href="#aaos" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:2;">
+        <p>Australian Adiminstrative Arrangement Orders</p>
+    </a>
+    <a href="#pbs" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:3;">
+        <p>Portfolio Budget Statements</p>
+    </a>
+    <a href="#crsdb" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:4;">
+        <p>Commonwealth Records Series Database</p>
+    </a>
+    <a href="#depfin" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:5;">
+        <p>Departmental Finances</p>
+    </a>
+
+    <div style="grid-row:4; grid-column:2/5; text-align: center;">
+        <h4>Classification Taxonomies</h4>
+    </div>
+    <a href="#agift" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:1;">
+        <p>AGIFT</p>
+    </a>
+    <a href="#gpc" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:2;">
+        <p>GPC</p>
+    </a>
+    <a href="#lgpc" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:3;">
+        <p>LGPC</p>
+    </a>
+    <a href="#cofog" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:4;">
+        <p>COFOG</p>
+    </a>
+    <a href="#crsth" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:5;">
+        <p>CRS-Th</p>
+    </a>
+    <a href="#cofoga" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:3;">
+        <p>COFOG-A</p>
+    </a>
+    
+    <div style="grid-row:7; grid-column:2/5; text-align: center;">
+        <h4>Linksets</h4>
+    </div>
+    <a href="#agiftcrsth" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:2;">
+        <p>AGIFT &rarr; CRS-Th</p>
+    </a>
+    <a href="#agifctcofoga" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:3;">
+        <p>AGIFT &rarr; COFOG-A</p>
+    </a>
+    <a href="#lgpccofog" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:4;">
+        <p>LGPC &rarr; COFOG</p>
+    </a>   
+</div>
+
+<!-- Mask to cover the whole screen -->
+<div id="mask"></div>
+
+<div class="window" id="agor">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Australian Government Organisations Register</h3>
+    <p>AGOR "provides information on the function, composition, origins and other details of Australian Government bodies". It is a dataset maintained by the <a href="https://www.finance.gov.au">Department of Finance</a> and used to power systms such as <a href="https://www.directory.gov.au">directory.gov.au</a>.</p>
+    <p>SURROUND has taken AGOR content from <a href="https://data.gov.au/dataset/ds-dga-c77cface-69aa-4dd0-b99f-b065dc33c8e6">data.gov.au</a> and used <a href="https://github.com/CSIRO-enviro-informatics/agor-ont">Semantic Web models of AGOR content</a> developed by the <a href="https://research.csiro.au/ei/">CSIRO's Environmental Informatics Team</a> to produce an ever-growing Seamntic Web dataset of AGOR content. Whenever AGOR is updated, we update our Semantic Web version of it so that you can follow AGOR changes over time easily - by using the Knowledge Graph approach.</p>
+</div>
+
+<div class="window" id="aaos">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Administrative Arrangement Orders</h3>
+    <p>AAOs are change orders issued by the Australian Government to reorganise the Civil Service.</p>
+    <p>All AAOs issued since the formation of Australia were processed by CSIRO into a single dataset according to the <a href="https://github.com/CSIRO-enviro-informatics/aao-ont">Administrative Arrangement Orders ontology</a> with data taken from the AAO documents published online by several government departments.</p>
+    <p>SURROUND has enhanced the AAOs model and rendering of AAOs data to present this dataset which now links in to other government structural datasets, such as AGO, and government functions, such as AGIFT.</p>
+</div>
+
+<div class="window" id="pbs">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Portfolio Budget Statements</h3>
+    <p>Portfolio Budget Statements (PBS) a descriptions of government agency budgets, per portfolio.</p>
+    <p>They are collated online in document form at <a href="https://www.budget.gov.au">https://www.budget.gov.au</a> and as data at <a href="https://www.data.gov.au/dataset/ds-dga-2fe0ab1a-3161-477a-9175-5c829d80afab/details?q=Budget%20statements">data.gov.au</a>.</p>
+    <p>SURROUND has developed a Semantic Web model of PBS content and formulated the PBS data according to it so that it's commensurate with AGOR, AAO and other GovKG datasets.</p>
+    <p>This is a <em>longitudinal</em> dataset with multiple PBS issuances over time within it. The last several most recent PBS issuances are already contained in GovKG and we will be adding more - backwards in time.</p>
+    <p>Financial figures from this dataset are good examples of data that could be used for reapportionment, according to some of the expected GovKG Use Cases.</p>
+</div>
+
+<div class="window" id="crsdb">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Commonwealth Records Series Database</h3>
+    <p>The CRS Database is a database of government structural content (agencies, organisations etc.) owned and maintained by the <a href="http://naa.gov.au">National Archives of Australia</a>. It is described at the National Archives of Australia's <a href="https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/AdvSearchMain.aspx">Records Search website</a>.</p>
+    <p>The CRS DB was modelled as a Semantic Web dataset by CSIRO in 2018/2019 and SURROUND has filled out the Semantic Web form of the data from the NAA's up-to-date instance of it.</p>
+    <p>CRS DB is an excellent longitudinal dataset of government structure: it contains not only changes over time from 1901 to present but also ancestor and successor agency links.</p>
+    <p>CRS DB is used by NAA and others to identify the agents (people, agencies, organisations) within government responsible for records generation and, via Record Authorities, the functions of government.</p>
+</div>
+
+<div class="window" id="depfin">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Departmental Finances</h3>
+    <p>The annual financial statements from departments, accumulated and presented in Semantic Web form.</p>
+    <p>SURROUND developed this dataset from publicly available departmental financial statements and using a Financies ontology that we developed.</p>
+    <p>Given that this data is now in a single Sematnic Web dataset, it is much easier to query across departments' fiannces, query values over time and to reapportion financial figures according to government functional vocabularies.</p>
+    <p>SURROUND will keep adding finances values to this dataset as they become available.</p>
+</div>
+
+
+
+<div class="window" id="agift">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Australian Government Interactive Functions Thesaurus</h3>
+    <p>The Australian Governments' Interactive Functions Thesaurus (AGIFT) is a three-level hierarchical thesaurus that describes the business functions carried out across Commonwealth, state and local governments in Australia.</p>
+    <p>AGIFT is maintained by the <a href="https://www.naa.gov.au">National Archives of Australia</a> and is in wide use among government agencies as a general purpose functional taxonomy for government. AGIFT is published online as a Sematnci Web asset by the NAA, see <a href="http://data.naa.gov.au/def/agift">http://data.naa.gov.au/def/agift</a>. SURROUND has enhanced this asset with some additional semantics to make it more powerful and we have also created several new Linksets that map AGIFT to other taxonomies.</p>
+    <p>Several structural datasets within GovGK have their elements  government structural units - annotated with the functions from AGIFT that they perform.</p>
+</div>
+
+<div class="window" id="gpc">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Government Purpose Classification</h3>
+    <p>This taxonomy is a SKOS representation of the <a href="https://www.abs.gov.au/">Australian Bureau of Statistics</a>' Government Purpose Classification (GPC) taxonomy, developed from its original form online at the ABS' website: <a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/Latestproducts/5514.0.55.001Appendix92005?opendocument&tabname=Notes&prodno=5514.0.55.001&issue=2005&num=&view">Revised Government Purpose Classification 2006</a>.</p>
+    <p>This taxonomy was originally developed by CSIRO and has been enhanced by SURROUND with additional semantic properties for Concepts and more Linksets joining GPC to other function taxonomies.</p>
+</div>
+
+<div class="window" id="lgpc">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Local Government Purpose Classification</h3>
+    <p>This taxonomy is a SKOS representation of the <a href="https://www.abs.gov.au/">Australian Bureau of Statistics</a>'s Local Government Purpose Classification (LGPC) for use in the collection, analysis and dissemination of local government finance statistics in Australia.</p>
+    <p>This taxonomy was originally developed by CSIRO and has been enhanced by SURROUND with additional semantic properties for Concepts and more Linksets joining GPC to other function taxonomies.</p>
+</div>
+
+<div class="window" id="cofog">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Classifications of Functions of Government</h3>
+    <p>This taxonomy is a pure SKOS rendition of the <a href="https://unstats.un.org/unsd/iiss/Classification-of-the-Functions-of-Government-COFOG.ashx">United Nations Statistics Division</a>-issued <strong>Classification of the Functions of Government</strong> taxonomy.</p>
+    <p>This version of COFOG was produced by the CSIRO in 2019. It was developed from an earlier rendering of COFOG as another form of Semantic Web asset earlier by CSIRO.</p>    
+</div>
+
+<div class="window" id="crsth">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Commonwealth Records Series Thesaurus</h3>
+    <p>This is the Commonwealth Record Series (CRS)' thesaurus of government functions delivered as a SKOS vocabulary.</p>
+    <p>Originally developed for the National Archives of Australia by the CSIRO, SURROUND have enhanced this version of the thesaurus with additional sematic properties.</p>
+    <p>Terms from this thesaurus are used within the CRS DB dataset of government structure.</p>
+</div>
+
+<div class="window" id="cofoga">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Classifications of Functions of Government - Australia</h3>
+    <p>This taxonomy is a SKOS representation of the Classification Of The Functions Of Government - Australia (COFOG-A) - vocabulary. The COFOG-A data is from the Australian Bureau of Statistics' <a href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/418BDDEBD088A012CA257F230019D433/$File/55140_2015.pdf">Australian System of Government Finance Statistics: Concepts, Sources and Methods</a>.</p>
+    <p>SURROUND have extended the original presentation of this dataset as a Semantic Web asset by enhanving its semantic properties and creating additional Linksets mapping its content to other taxonomies.</p>
+</div>
+
+
+<div class="window" id="agiftcrsth">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>AGIFT &rarr; CRS-Th</h3>
+    <p>This Linkset - a specialised Dataset linking objects in two other Datasets - maps between Concepts in the AGIFT and Concepts in the CRS Thesaurus both of which are taxonomies of Australian government functions.</p>
+    <p>This Linkset was originally created by CSIRO in 2019 and it has been enhanced by SURROUND with some improved mappings in 2020.</p>
+</div>
+
+<div class="window" id="agifctcofoga">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>AGIFT &rarr; COFOG-A</h3>
+    <p>This Linkset - a specialised Dataset linking objects in two other Datasets - maps between Concepts in the AGIFT and Concepts in COFOG-A both of which are taxonomies of Australian government functions.</p>
+    <p>This Linkset was originally created by CSIRO in 2019 and it has been enhanced by SURROUND with some improved mappings in 2020.</p>
+</div>
+
+<div class="window" id="lgpccofog">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>LGPC &rarr; COFOG</h3>
+    <p>This Linkset - a specialised Dataset linking objects in two other Datasets - maps between Concepts in the LGPC and Concepts in COFOG both of which are taxonomies of government functions, the first of Australian local government and the second of generic international functions.</p>
+    <p>This Linkset was originally created by CSIRO in 2019 and it has been enhanced by SURROUND with some improved mappings in 2020.</p>
 </div>
