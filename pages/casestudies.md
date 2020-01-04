@@ -24,7 +24,7 @@ SURROUND built the prototype for the [SORT Robot](/sort) to answer this challeng
 <hr />
 
 <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">
-    <img src="images/logo-gsq.webp" style="height:100px;" />
+    <img src="images/logo-gsq.jpg" style="height:100px;" />
 </a>
 ## Geoscience Data Mondernisation Programme
 The [Geological Survey of Queensland (GSQ)](https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq) undertook a major project to update all of their data systems and processes to allow the resources sector to gain greater benefits from the information its contain. This involved deprecating legacy databases and data stores, moving data and tools to the cloud and considering holistic approaches to the agency's total data holdings.
@@ -36,7 +36,7 @@ SURROUND staff responded with implementing both an overarching formal data model
 GSQ has now "semantically enabled" much of their data and is on track to delivering a wide range of data products that, for the first time, are able to be integrated across systems and data themes due to the overarching data modelling.
 
 <hr />
-![](images/logo-actgov.webp)
+<img src="images/logo-actgov.png" alt="ACT Gov logo" style="width:150px;" />
 ## Access Canberra Program
 The Australian Capital Territory Government's Access Canberra initiative highlights the issues and opportunities created by the islands of information present in the Big Data and semantic world.
 
