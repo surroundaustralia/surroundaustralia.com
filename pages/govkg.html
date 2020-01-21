@@ -41,7 +41,7 @@ permalink: /govkg
         display: grid;
         grid-template-columns: 180px 180px 1fr 180px 180px;
         grid-column-gap: 18px;
-        grid-template-rows: 40px 75px 100px 75px 150px 75px 75px 75px 10px;
+        grid-template-rows: 40px 75px 75px 150px 40px 150px 75px 20px 80px 75px 55px;
         grid-row-gap: 18px;
         margin-top: 20px;
         padding: 0 10px 0 10px;
@@ -55,6 +55,7 @@ permalink: /govkg
         min-height: 100px;
         color: white;
         text-decoration:none;
+        margin-bottom: 20px;
     }
     .dataset {
         border:solid darkred 1px;
@@ -295,61 +296,75 @@ permalink: /govkg
     <div style="grid-row:2; grid-column:2/5; text-align: center;">
         <h4>Structure Datasets</h4>
     </div>
-    <a href="#agor" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:1;">
+    <a href="#agor" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:2;">
         <p>Australian Government Organisations Register</p>
     </a>
-    <a href="#aaos" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:2;">
+    <a href="#aaos" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:3;">
         <p>Australian Adiminstrative Arrangement Orders</p>
     </a>
-    <a href="#pbs" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:3;">
+    <a href="#pbs" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:4;">
         <p>Portfolio Budget Statements</p>
     </a>
-    <a href="#crsdb" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:4;">
+    <a href="#crsdb" name="modal" class="contentitem dataset" style="grid-row:4; grid-column:3;">
         <p>Commonwealth Records Series Database</p>
     </a>
-    <a href="#depfin" name="modal" class="contentitem dataset" style="grid-row:3; grid-column:5;">
-        <p>Departmental Finances</p>
-    </a>
 
-    <div style="grid-row:4; grid-column:2/5; text-align: center;">
+    <div style="grid-row:5; grid-column:2/5; text-align: center;">
         <h4>Classification Taxonomies</h4>
     </div>
-    <a href="#agift" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:1;">
+    <a href="#agift" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:1;">
         <p>Australian Government Interactive Functions Thesuarus (AGIFT)</p>
     </a>
-    <a href="#gpc" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:2;">
+    <a href="#gpc" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:2;">
         <p>Government Purpose Classification (GPC)</p>
     </a>
-    <a href="#lgpc" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:3;">
+    <a href="#lgpc" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:3;">
         <p>Local Government Purpose Classification (LGPC)</p>
     </a>
-    <a href="#cofog" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:4;">
+    <a href="#cofog" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:4;">
         <p>Classifications of Functions of Government (COFOG)</p>
     </a>
-    <a href="#crsth" name="modal" class="contentitem taxonomy" style="grid-row:5; grid-column:5;">
+    <a href="#crsth" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:5;">
         <p>Commonwealth Record Series (CRS) Thesaurus</p>
     </a>
-    <a href="#cofoga" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:3;">
+    <a href="#est" name="modal" class="contentitem taxonomy" style="grid-row:7; grid-column:1;">
+        <p>Entity Establishment Authority</p>
+    </a> 
+    <a href="#cofoga" name="modal" class="contentitem taxonomy" style="grid-row:7; grid-column:2;">
         <p>Classifications of Functions of Government - Australia (COFOG-A)</p>
     </a>
-    <a href="#gfs" name="modal" class="contentitem taxonomy" style="grid-row:6; grid-column:4;">
+    <a href="#gfs" name="modal" class="contentitem taxonomy" style="grid-row:7; grid-column:3;">
         <p>Government Finance Statistics</p>
-    </a>    
-    
-    <div style="grid-row:7; grid-column:2/5; text-align: center;">
+    </a>
+    <a href="#for" name="modal" class="contentitem taxonomy" style="grid-row:7; grid-column:4;">
+        <p>Fields of Research</p>
+    </a>
+    <a href="#psact" name="modal" class="contentitem taxonomy" style="grid-row:7; grid-column:5;">
+        <p>Public Service Act Body Types</p>
+    </a> 
+
+    <div style="grid-row:9; grid-column:2/5; text-align: center;">
         <h4>Linksets</h4>
     </div>
-    <a href="#agiftcrsth" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:2;">
+    <a href="#agiftcrsth" name="modal" class="contentitem linkset" style="grid-row:10; grid-column:2;">
         <p>AGIFT &rarr; CRS-Th</p>
     </a>
-    <a href="#agifctcofoga" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:3;">
+    <a href="#agifctcofoga" name="modal" class="contentitem linkset" style="grid-row:10; grid-column:3;">
         <p>AGIFT &rarr; COFOG-A</p>
     </a>
-    <a href="#lgpccofog" name="modal" class="contentitem linkset" style="grid-row:8; grid-column:4;">
+    <a href="#lgpccofog" name="modal" class="contentitem linkset" style="grid-row:10; grid-column:4;">
         <p>LGPC &rarr; COFOG</p>
     </a>   
+
+    <div style="grid-row:11; grid-column:2/5; text-align: center;">
+        <h4>Numerical Datasets</h4>
+    </div>   
+    <a href="#depfin" name="modal" class="contentitem dataset" style="grid-row:12; grid-column:3;">
+        <p>Departmental Finances</p>
+    </a> 
 </div>
 
+<p></p>
 <!-- Mask to cover the whole screen -->
 <div id="mask"></div>
 
@@ -467,4 +482,28 @@ permalink: /govkg
     <h3>LGPC &rarr; COFOG</h3>
     <p>This Linkset - a specialised Dataset linking objects in two other Datasets - maps between Concepts in the LGPC and Concepts in COFOG both of which are taxonomies of government functions, the first of Australian local government and the second of generic international functions.</p>
     <p>This Linkset was originally created by CSIRO in 2019 and it has been enhanced by SURROUND with some improved mappings in 2020.</p>
+</div>
+
+<div class="window" id="est">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Entity Establishment Authority</h3>
+    <p>A taxonomy of authorities - legal instruments, government jursdictional bodies etc. - authorising the creation of government entities.</p>
+    <p>This taxonomy links Federal Australian government organisations to information that is the subject of machine-readability improvements: laws, regulation etc. As GovKG grows, we will expand not only this taxonomy but also the Semantic Web representations of the objects indicated by it (the laws and so on).</p>
+</div>
+
+<div class="window" id="for">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Fields of Research</h3>
+    <p>The Australian and New Zealand Standard Research Classification: Fields of Research allows research and development (R&D) activity to be categorised according to the methodology used in the R&D.</p>
+    <p>This taxonomy is taken from the open publication of it on Research Vocabularies Austraia:</p>
+    <ul>
+        <li><a href="https://vocabs.ands.org.au/viewById/20">Australian and New Zealand Standard Research Classification: Fields of Research</a></li>
+    </ul>
+</div>
+
+<div class="window" id="psact">
+    <div class="window-links"><a href="#" class="close">Close</a></div>
+    <h3>Public Service Act Body Types</h3>
+    <p>Classifications of Australian Public Service entities according to the <a href="https://www.legislation.gov.au/Details/C2019C00057">Public Service Act 1999</a>.</p>
+    <p>The classifications are distilled from the Act within the AGOR dataset and this taxonomy is a representation of that list.</p>
 </div>
