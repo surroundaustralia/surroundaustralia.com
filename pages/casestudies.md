@@ -13,7 +13,7 @@ The [National Archives of Australia (NAA)](http://www.naa.gov.au) is the Austral
 
 Government agencies have to determine the business purpose of all their electronic records and then transfer those of the highest importance to the NAA. Deciding what is important and what is not can sometimes be difficult. Although for some documents this is obvious, e.g. a ministerial briefing is likely important, what about the very many non-trivial emails, spreadsheets, reports and even data objects?
 
-SURROUND work on a Feasablity study for NAA in late 2019 to determine how feasable it would be to classify very large volumes of records automatically. If automation isn't achieved eventually, government agencies will either have to send the NAA everything or nothing - they just won't be able to make sensible decisions.
+SURROUND work on a Feasibility study for NAA in late 2019 to determine how feasible it would be to classify very large volumes of records automatically. If automation isn't achieved eventually, government agencies will either have to send the NAA everything or nothing - they just won't be able to make sensible decisions.
 
 SURROUND built the prototype for the [SORT Robot](/sort) to answer this challenge.
 
