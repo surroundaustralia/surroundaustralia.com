@@ -28,12 +28,11 @@ permalink: /
     #highlight-content {    
         position: absolute; 
         z-index: 2; 
-        top:80px; 
-        left:15%;  
-        width:1200px; 
+        top:80px;  
+        width:100%; 
         background-color: rgb(182, 46, 51); /*rgb(238, 238, 238);*/
         display: grid;
-        grid-template-columns: 800px 370px;
+        grid-template-columns: 1fr 800px 370px 1fr ;
         column-gap: 20px;
         color: white;
         padding:20px;
@@ -74,12 +73,12 @@ permalink: /
 </style>
 <div id="highlight">
     <div id="highlight-content">
-        <div style="grid-column:1;">
+        <div style="grid-column:2;">
             <a href="/sop">
                 <img src="images/sop-torn.png" style="width:800px;" />
             </a>
         </div>
-        <div style="grid-column:2;">
+        <div style="grid-column:3;">
             <h4>
                 The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
             </h4>
