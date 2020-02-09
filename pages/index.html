@@ -23,20 +23,21 @@ permalink: /
 
     #highlight {    
         grid-area: highlight;
-        height:260px;
+        height:290px;
     }
     #highlight-content {    
         position: absolute; 
         z-index: 2; 
-        top:80px;  
+        top:100px; 
+        left:0px; 
         width:100%; 
-        background-color: rgb(182, 46, 51); /*rgb(238, 238, 238);*/
+        background-color: rgb(182, 46, 51);
         display: grid;
-        grid-template-columns: 1fr 800px 370px 1fr ;
-        column-gap: 20px;
+        grid-template-columns: 1fr 800px 380px 1fr ;
+        column-gap: 40px;
         color: white;
+        height:250px;
         padding:20px;
-        height:260px;
     }
     #highlight-content h4 {
         letter-spacing: 2px;
@@ -66,31 +67,31 @@ permalink: /
     #content > div > div {
         place-self: center;
     }
-    #content > div > div > h3 {
+    h3 {
         font-weight: bold;
         color: rgb(87, 36, 90);
     }
 </style>
 <div id="highlight">
-    <div id="highlight-content">
-        <div style="grid-column:2;">
-            <a href="/sop">
-                <img src="images/sop-torn.png" style="width:800px;" />
-            </a>
-        </div>
-        <div style="grid-column:3;">
-            <h4>
-                The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
-            </h4>
-            <h4>
-                If you have multi-part graphs, it may be just what you need.
-            </h4>
-            <h4>
-                No other tool comes close for total and individual graph governance, transformations and integrations. 
-            </h4>
-        </div>
-    </div> 
 </div>
+<span id="highlight-content">
+    <div style="grid-column:2;">
+        <a href="/sop">
+            <img src="images/sop-torn.png" style="width:800px;" />
+        </a>
+    </div>
+    <div style="grid-column:3; text-align:justify;"">
+        <h4>
+            The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
+        </h4>
+        <h4>
+            If you have multi-part graphs, it may be just what you need.
+        </h4>
+        <h4>
+            No other tool comes close for total and individual graph governance, transformations and integrations. 
+        </h4>
+    </div>
+</span> 
 <div id="solutions">
     <div>
         <a href="/solutions">
