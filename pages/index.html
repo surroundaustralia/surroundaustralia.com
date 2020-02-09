@@ -1,410 +1,236 @@
 ---
+layout: page
 title: "Home"
 permalink: /
 ---
-<html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title>SURROUND Australia Pty Ltd</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    </head>
-    <body>
-        <style>
-            body {
-                font-family: Lato;
-                background-image: url("/images/corner.png");
-                background-size: cover;
-                margin: 0;
-                padding: 0;
-            }
-            #gpagecontainer {
-                display: grid;
-                grid-template-columns: 1fr 1000px 1fr;
-                grid-template-rows: 100px auto 1fr;
-                grid-template-areas: 
-                    "header header header"
-                    "highlight highlight highlight"
-                    ". content ."
-                    "footer footer footer";                
-            }
-            #gitem-header {
-                grid-area: header;
-                display: grid;
-                grid-template-columns: 1fr 110px 390px 500px 1fr;
-                align-items: center;                
-            }
-            #nav > a {
-                color:rgb(100, 100, 100);
-                text-decoration: none;                
-                margin-right: 10px;
-            }
-            #gitem-content {
-                grid-area: content;
-            }
-            #gitem-footer {
-                grid-area: footer;
-                display: grid;
-                grid-template-columns: 1fr 500px 500px 1fr;
-                border-top: solid 1px rgb(38, 51, 122);
-                background-color: rgb(238, 238, 238);
-                padding: 20px;
-            }
+<style>
+    #content {
+        display: grid;
+        grid-row-gap: 50px;
+        grid-template-areas: 
+            "highlight"
+            "solutions"
+            "products"
+            "who"
+            "about"
+            "contact";
+    }
 
-            #gitem-footer a {
-                color:rgb(100, 100, 100);
-            }
-        </style>
-        <style>
-            #gitem-content {
-                display: grid;
-                grid-row-gap: 50px;
-                grid-template-areas: 
-                    "solutions"
-                    "products"
-                    "who"
-                    "about"
-                    "contact";
-                row-gap: 30px;
-            }
+    #content > div > div {
+        margin: 20px;
+        text-align: justify;
+    }
 
-            #gitem-content > div > div {
-                margin: 20px;
-                text-align: justify;
-            }
+    #highlight {    
+        grid-area: highlight;
+        height:260px;
+    }
+    #highlight-content {    
+        position: absolute; 
+        z-index: 2; 
+        top:80px; 
+        left:15%;  
+        width:1200px; 
+        background-color: rgb(182, 46, 51); /*rgb(238, 238, 238);*/
+        display: grid;
+        grid-template-columns: 800px 370px;
+        column-gap: 20px;
+        color: white;
+        padding:20px;
+        height:260px;
+    }
+    #highlight-content h4 {
+        letter-spacing: 2px;
+        font-size: 16px
+    }
+    #solutions {
+        grid-area: solutions;
+    }
+    #products {
+        grid-area: products;
+    }
+    #who {
+        grid-area: who;
+    }
+    #about {
+        grid-area: about;
+    }
+    #contact {
+        grid-area: contact;
+    }
 
-            #highlight {    
-                grid-area: highlight;
-                background-color: rgb(182, 46, 51); /*rgb(238, 238, 238);*/
-                display: grid;
-                grid-template-columns: 1fr 800px 400px 1fr;
-                column-gap: 50px;
-                color: white;
-                padding:10px;
-            }
-            #highlight h3 {
-                letter-spacing: 2px;
-            }
-            #solutions {
-                grid-area: solutions;
-            }
-            #products {
-                grid-area: products;
-            }
-            #who {
-                grid-area: who;
-            }
-            #about {
-                grid-area: about;
-            }
-            #contact {
-                grid-area: contact;
-            }
-
-            #gitem-content > div {
-                display: grid;
-                grid-template-columns: 490px 490px; 
-                grid-column-gap: 15px; 
-            }
-            #gitem-content > div > div {
-                place-self: center;
-            }
-            #gitem-content > div > div > h2 {
-                font-weight: bold;
-                color: rgb(87, 36, 90);
-            }
-
-            #nav-container {
-            margin: 0 auto;
-            }
-        
-            nav {
-                margin: 35px 0;
-            }
-            nav ul {
-                padding: 0;
-                    margin: 0;
-                list-style: none;
-                position: relative;
-            }	
-            nav ul li {
-                display:inline-block;
-            }
-            nav a {
-                display:block;
-                padding:0 10px;	
-                /*color:rgb(50, 50, 50);*/
-                color:rgb(100, 100, 100);
-                line-height: 30px;
-                text-decoration:none;
-            }
-            nav a:hover { 
-                color: rgb(38, 51, 122);
-            }
-            nav ul ul {
-                display: none;
-                position: absolute; 
-                top: 30px; 	
-            }	
-            nav ul li:hover > ul {
-                display:inherit;
-            }	
-            nav ul ul li {
-                width:230px;
-                float:none;
-                display:list-item;
-                position: relative;
-                background-color: white;;
-            }
-            nav ul ul ul li {
-                position: relative;
-                top:-60px; 
-                left:230px;
-            }
-            li > a:only-child:after { content: ''; }              
-        </style>        
-        <div id="gpagecontainer">
-            <div id="gitem-header">
-                <div style="grid-column:2;">
-                    <a href="https://surroundaustralia.com">
-                        <img id="surround-logo" src="images/SURROUND-logo.png" alt="SURROUND logo" style="height: 100px;" />
-                    </a>
-                </div>
-                <div style="grid-column:3;">
-                    <style>
-                        #company-title-s {
-                            color: rgb(50, 50, 50); 
-                            font-size: 35px;
-                            font-weight: 800;
-                            text-decoration: none;
-                        }
-                        #company-title-a {
-
-                            color: rgb(100, 100, 100); 
-                            font-size: 35px;
-                            font-weight: bold;
-                            text-decoration: none;
-                        }
-                    </style>
-                    <a id="company-title-s" href="https://surroundaustralia.com">
-                        SURROUND
-                    </a>
-                    <a id="company-title-a" href="https://surroundaustralia.com">
-                        Australia
-                    </a>
-                </div>
-                <div style="grid-column:4;" id="nav-container" >
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="/solutions">Solutions</a>
-                                <ul>
-                                    <li><a href="/consulting">Consulting</a></li>
-                                    <li><a href="/casestudies">Case Studies</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/products">Products</a>
-                                <ul>
-                                    <li><a href="/sort">SORT Robot</a></li>
-                                    <li><a href="/govkg">GovKG</a></li>
-                                    <li><a href="/acbt">ACBT</a></li>
-                                    <li><a href="/sop">SOP</a></li>
-                                </ul>
-                            </li>     
-                            <!--
-                            <li>
-                                <a href="/who">Who we work with</a>
-                                <ul>
-                                    <li><a href="/clients">Clients</a></li>
-                                    <li><a href="/partners">Partners</a></li>
-                                </ul>
-                            </li>
-                            -->
-                            <li>
-                                <a href="/tech">Technology</a>
-                                <ul>
-                                    <li><a href="/consulting">Consulting</a></li>
-                                    <li><a href="/sop">SOP</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/about">About</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div id="highlight">
-                <div style="grid-column:2;">
-                    <a href="/sop">
-                        <img src="images/sop-torn.png" style="width:800px;" />
-                    </a>
-                </div>
-                <div style="grid-column:3;">
-                    <h3>
-                        The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
-                    </h3>
-                    <h3>
-                        If you have multi-part graphs, it may be just what you need.
-                    </h3>
-                    <h3>
-                        No other tool comes close for total and individual graph governance, transformations and integrations. 
-                    </h3>
-                </div>
-            </div>            
-            <div id="gitem-content">
-                <div id="solutions">
-                    <div>
-                        <a href="/solutions">
-                            <img src="images/icon-solutions.png" alt="Solutions icon" style="height:200px;" />
-                        </a>
-                    </div>
-                    <div>
-                        <h2>SOLUTIONS</h2>
-                        <p>
-                            SURROUND uses modern semantic data tools to solve complex knowledge problems so public and private organisations can collaborate more effectively, make smarter evidence-based decisions, and achieve greater citizen well-being.
-                        </p>
-                    </div>
-                </div>
-                <div id="products" style="background-color: rgb(238, 238, 238);">
-                    <div>
-                        <h2>PRODUCTS</h2>
-                        <p>
-                            SURROUND maintains a series of products on top of platforms we've developed over many years as well as industry-best platforms supported by our partners.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="/products">
-                            <img src="images/icon-products.png" alt="Products icon" style="height:200px;" />
-                        </a>
-                        <p>
-                            <ul>
-                                <li><a href="/govkg">Gov Knowldege Graph</a></li>
-                                <li><a href="/acbt">ACBT</a></li>
-                                <li><a href="/sort">SORT Robot</a></li>
-                                <li><a href="/sop">SURROUND Ontology Platform</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-                <div id="who">
-                    <div>
-                        <table class="table-container">
-                            <tr>
-                                <td>
-                                    <a href="https://www.act.gov.au">
-                                        <img src="images/logo-actgov.png" style="height:80px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://www.humanservices.gov.au">
-                                        <img src="images/logo-dhs.png" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://www.dss.gov.au">
-                                        <img src="images/logo-dss.png" style="height:100px;" />
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width:50%">
-                                    <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">
-                                        <img src="images/logo-gsq.jpg" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://www.naa.gov.au">
-                                        <img src="images/logo-naa.png" style="height:75px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>                    
-                    </div>
-                    <div>
-                        <h2>WHO WE WORK WITH</h2>
-                        <p>
-                            We work with Federal, State, and Territory Governments, Government Business Enterprises and Statutory Authorities, and private businesses. 
-                        </p>
-                        <p>
-                            Our clients include the Australian Capital Territory Government, the Department of Social Services, and the Department of Human Services.
-                        </p>
-                    </div>
-                </div>
-                <div id="about" style="background-color: rgb(238, 238, 238);">
-                    <div>
-                        <h2>ABOUT US</h2>
-                        <p>
-                            In 2006, SURROUND's three founders (Brad McCusker, Michael D'Aprix, and Marcus Jowsey) set out to transform the way government works. The team has developed solutions to the hurdles governments face when accessing, analysing, and managing their knowledge base.
-                        </p>
-                        <p>
-                            SURROUND's core mission is to provide value to citizens by providing government agencies with business intelligence and information integration tools at a fraction of their current costs.
-                        </p>
-                        <p>
-                            SURROUND uses sophisticated approaches to data management to help solve complex knowledge problems so that federal, state, and local governments of all sizes can collaborate more effectively, make smarter evidence-based decisions, and achieve greater citizen well-being.
-                        </p>
-                    </div>
-                    <div>
-                        <table style="margin: 0 auto;">
-                            <tr>
-                                <td>
-                                    <a href="/about">
-                                        <img src="images/person-bill.jpg" alt="Bill" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/about#brad">
-                                        <img src="images/person-brad.jpg" alt="Brad" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/about#marcus">
-                                        <img src="images/person-marcus.jpg" alt="Marcus" style="height:100px;" />
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>                    
-                                <td>
-                                    <a href="/about">
-                                        <img src="images/person-michael.jpg" alt="Michael" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/about#nick">
-                                        <img src="images/person-nick.jpg" alt="Nick" style="height:100px;" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="/about#rob">
-                                        <img src="images/person-rob.jpg" alt="Rob" style="height:100px;" />
-                                    </a>
-                                </td>                                        
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div id="contact">
-                    <div>
-                        <h2>WANT TO KNOW MORE?</h2>
-                    </div>
-                    <div>
-                        <p>
-                            Why not <a href="/contact">Contact Us</a>?
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="gitem-footer">
-                <div style="grid-column:2; justify-self: left;">
-                    &copy; <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd, 2020</a>
-                </div>
-                <div style="grid-column:3; justify-self: right;">
-                    <a href="/about">About</a> | <a href="/contact">Contact Us</a>
-                </div>
-            </div>
+    #content > div {
+        display: grid;
+        grid-template-columns: 490px 490px; 
+        grid-column-gap: 15px; 
+    }
+    #content > div > div {
+        place-self: center;
+    }
+    #content > div > div > h3 {
+        font-weight: bold;
+        color: rgb(87, 36, 90);
+    }
+</style>
+<div id="highlight">
+    <div id="highlight-content">
+        <div style="grid-column:1;">
+            <a href="/sop">
+                <img src="images/sop-torn.png" style="width:800px;" />
+            </a>
         </div>
-    </body>
-</html>
-
-
-
+        <div style="grid-column:2;">
+            <h4>
+                The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
+            </h4>
+            <h4>
+                If you have multi-part graphs, it may be just what you need.
+            </h4>
+            <h4>
+                No other tool comes close for total and individual graph governance, transformations and integrations. 
+            </h4>
+        </div>
+    </div> 
+</div>
+<div id="solutions">
+    <div>
+        <a href="/solutions">
+            <img src="images/icon-solutions.png" alt="Solutions icon" style="height:200px;" />
+        </a>
+    </div>
+    <div>
+        <h3>SOLUTIONS</h3>
+        <p>
+            SURROUND uses modern semantic data tools to solve complex knowledge problems so public and private organisations can collaborate more effectively, make smarter evidence-based decisions, and achieve greater citizen well-being.
+        </p>
+    </div>
+</div>
+<div id="products" style="background-color: rgb(238, 238, 238);">
+    <div>
+        <h3>PRODUCTS</h3>
+        <p>
+            SURROUND maintains a series of products on top of platforms we've developed over many years as well as industry-best platforms supported by our partners.
+        </p>
+    </div>
+    <div>
+        <a href="/products">
+            <img src="images/icon-products.png" alt="Products icon" style="height:200px;" />
+        </a>
+        <p>
+            <ul>
+                <li><a href="/govkg">Gov Knowldege Graph</a></li>
+                <li><a href="/acbt">ACBT</a></li>
+                <li><a href="/sort">SORT Robot</a></li>
+                <li><a href="/sop">SURROUND Ontology Platform</a></li>
+            </ul>
+        </p>
+    </div>
+</div>
+<div id="who">
+    <div>
+        <table class="table-container">
+            <tr>
+                <td>
+                    <a href="https://www.act.gov.au">
+                        <img src="images/logo-actgov.png" style="height:80px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.humanservices.gov.au">
+                        <img src="images/logo-dhs.png" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.dss.gov.au">
+                        <img src="images/logo-dss.png" style="height:100px;" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <a href="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq">
+                        <img src="images/logo-gsq.jpg" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.naa.gov.au">
+                        <img src="images/logo-naa.png" style="height:75px;" />
+                    </a>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>                    
+    </div>
+    <div>
+        <h3>WHO WE WORK WITH</h3>
+        <p>
+            We work with Federal, State, and Territory Governments, Government Business Enterprises and Statutory Authorities, and private businesses. 
+        </p>
+        <p>
+            Our clients include the Australian Capital Territory Government, the Department of Social Services, and the Department of Human Services.
+        </p>
+    </div>
+</div>
+<div id="about" style="background-color: rgb(238, 238, 238);">
+    <div>
+        <h3>ABOUT US</h3>
+        <p>
+            In 2006, SURROUND's three founders (Brad McCusker, Michael D'Aprix, and Marcus Jowsey) set out to transform the way government works. The team has developed solutions to the hurdles governments face when accessing, analysing, and managing their knowledge base.
+        </p>
+        <p>
+            SURROUND's core mission is to provide value to citizens by providing government agencies with business intelligence and information integration tools at a fraction of their current costs.
+        </p>
+        <p>
+            SURROUND uses sophisticated approaches to data management to help solve complex knowledge problems so that federal, state, and local governments of all sizes can collaborate more effectively, make smarter evidence-based decisions, and achieve greater citizen well-being.
+        </p>
+    </div>
+    <div>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td>
+                    <a href="/about">
+                        <img src="images/person-bill.jpg" alt="Bill" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="/about#brad">
+                        <img src="images/person-brad.jpg" alt="Brad" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="/about#marcus">
+                        <img src="images/person-marcus.jpg" alt="Marcus" style="height:100px;" />
+                    </a>
+                </td>
+            </tr>
+            <tr>                    
+                <td>
+                    <a href="/about">
+                        <img src="images/person-michael.jpg" alt="Michael" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="/about#nick">
+                        <img src="images/person-nick.jpg" alt="Nick" style="height:100px;" />
+                    </a>
+                </td>
+                <td>
+                    <a href="/about#rob">
+                        <img src="images/person-rob.jpg" alt="Rob" style="height:100px;" />
+                    </a>
+                </td>                                        
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="contact">
+    <div>
+        <h3>WANT TO KNOW MORE?</h3>
+    </div>
+    <div>
+        <p>
+            Why not <a href="/contact">Contact Us</a>?
+        </p>
+    </div>
+</div>
