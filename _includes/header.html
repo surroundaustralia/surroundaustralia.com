@@ -1,0 +1,132 @@
+<style>
+    #header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 110px 390px 500px 1fr;
+        align-items: center;                
+    }
+    #nav > a {
+        color:rgb(100, 100, 100);
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    #nav-container {
+        margin: 0 auto;
+    }
+
+    nav {
+        margin: 35px 0;
+    }
+    nav ul {
+        padding: 0;
+            margin: 0;
+        list-style: none;
+        position: relative;
+    }	
+    nav ul li {
+        display:inline-block;
+    }
+    nav a {
+        display:block;
+        padding:0 10px;	
+        /*color:rgb(50, 50, 50);*/
+        color:rgb(100, 100, 100);
+        line-height: 30px;
+        text-decoration:none;
+    }
+    nav a:hover { 
+        color: rgb(38, 51, 122);
+    }
+    nav ul ul {
+        display: none;
+        position: absolute; 
+        top: 30px; 	
+    }	
+    nav ul li:hover > ul {
+        display:inherit;
+    }	
+    nav ul ul li {
+        width:230px;
+        float:none;
+        display:list-item;
+        position: relative;
+    }
+    nav ul ul ul li {
+        position: relative;
+        top:-60px; 
+        left:230px;
+    }
+    li > a:only-child:after { 
+        content: ''; 
+    }
+</style>
+<div id="header">
+    <div style="grid-column:2;">
+        <a href="https://surroundaustralia.com">
+            <img id="surround-logo" src="images/SURROUND-logo-trans.png" alt="SURROUND logo" style="height: 100px;" />
+        </a>
+    </div>
+    <div style="grid-column:3;">
+        <style>
+            #company-title-s {
+                color: rgb(50, 50, 50); 
+                font-size: 35px;
+                font-weight: 800;
+                text-decoration: none;
+            }
+            #company-title-a {
+                color: rgb(100, 100, 100); 
+                font-size: 35px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        </style>
+        <a id="company-title-s" href="https://surroundaustralia.com">
+            SURROUND
+        </a>
+        <a id="company-title-a" href="https://surroundaustralia.com">
+            Australia
+        </a>
+    </div>
+    <div style="grid-column:4;" id="nav-container" >
+        <nav>
+            <ul>
+                <li>
+                    <a href="/solutions">Solutions</a>
+                    <ul>
+                        <li><a href="/consulting">Consulting</a></li>
+                        <li><a href="/casestudies">Case Studies</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/products">Products</a>
+                    <ul>
+                        <li><a href="/sort">SORT Robot</a></li>
+                        <li><a href="/govkg">GovKG</a></li>
+                        <li><a href="/acbt">ACBT</a></li>
+                        <li><a href="/sop">SOP</a></li>
+                    </ul>
+                </li>
+                <!--
+                <li>
+                    <a href="/who">Who we work with</a>
+                    <ul>
+                        <li><a href="/clients">Clients</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                    </ul>
+                </li>
+                -->
+                <li>
+                    <a href="/tech">Technology</a>
+                    <ul>
+                        <li><a href="/consulting">Consulting</a></li>
+                        <li><a href="/sop">SOP</a></li>
+                        <li><a href="/kaas">KaaS</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
