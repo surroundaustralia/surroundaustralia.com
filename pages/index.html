@@ -33,16 +33,30 @@ permalink: /
         width:100%; 
         background-color: rgb(182, 46, 51);
         display: grid;
-        grid-template-columns: 1fr 800px 380px 1fr ;
-        column-gap: 40px;
+        grid-template-columns: 1fr 400px 780px 1fr ;
+        column-gap: 10px;
         color: white;
         height:250px;
         padding:20px;
+    }
+    #highlight-content h3 {
+        color: white;
     }
     #highlight-content h4 {
         letter-spacing: 2px;
         font-size: 16px
     }
+    #highlight-content ul {
+        list-style-image: url('images/icon-pdf-small.png');
+    }
+    #highlight-content a {
+        color: white;
+        text-decoration: none;
+    }
+    #highlight-content a:hover {
+        text-decoration: underline;
+    }
+
     #solutions {
         grid-area: solutions;
     }
@@ -75,12 +89,23 @@ permalink: /
 <div id="highlight">
 </div>
 <span id="highlight-content">
-    <div style="grid-column:2;">
+    <div style="grid-column:2;" style="text-align: center;">
+        <!--
         <a href="/sop">
             <img src="images/sop-torn.png" style="width:800px;" />
         </a>
+        -->
+        <a href="/files/SORT-PoC-PRESS-RELEASE-Feb-2020.pdf" style="text-decoration:none;" />
+            <img src="images/sort-pr-rotated.png" />
+        </a>        
     </div>
-    <div style="grid-column:3; text-align:justify;"">
+    <div style="grid-column:3; text-align:justify;">
+        <h3>
+            SURROUND WINS DEPT OF INNOVATION, INDUSTRY & SCIENCE CHALLENGE TO CLASSIFY
+ELECTRONIC RECORDS
+        </h3>
+        <h3><ul><li><a href="/files/SORT-PoC-PRESS-RELEASE-Feb-2020.pdf">Read the Press Release</a></li></ul></h3>
+        <!--
         <h4>
             The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
         </h4>
@@ -90,7 +115,8 @@ permalink: /
         <h4>
             No other tool comes close for total and individual graph governance, transformations and integrations. 
         </h4>
-    </div>
+        -->
+    </div>    
 </span> 
 <div id="solutions">
     <div>
