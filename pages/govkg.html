@@ -14,6 +14,15 @@ permalink: /govkg
 <p>If you like the idea of GovKG and would like it extended for your particular government or scenario, please just <a href="/contact">Contact Us</a>! It's almost certainly possible to accomodate your requirements since extension's the name of the game for this sort of data product.</p>
 
 <style>
+        @media (max-width: 1000px) {
+        #usecases{
+            display: block!important;
+        }
+        #contenttypes{
+            display: block!important;
+        }
+        
+    }
     #usecases {
         display: grid;
         grid-template-columns: 400px 1fr;        
@@ -41,7 +50,7 @@ permalink: /govkg
         display: grid;
         grid-template-columns: 180px 180px 1fr 180px 180px;
         grid-column-gap: 18px;
-        grid-template-rows: 40px 75px 75px 150px 40px 150px 75px 20px 80px 75px 55px;
+        grid-template-rows: 40px 100px 75px 150px 60px 150px 75px 20px 98px 75px 80px;
         grid-row-gap: 18px;
         margin-top: 20px;
         padding: 0 10px 0 10px;
@@ -60,14 +69,23 @@ permalink: /govkg
     .dataset {
         border:solid darkred 1px;
         background-color: rgb(182, 46, 51);
+        display: flex;
+       flex-wrap: wrap;
     }
     .taxonomy {
         border:solid darkblue 1px;
         background-color: rgb(36, 47, 115);
+        display: flex;
+        flex-wrap: wrap;
     }
     .linkset {
         border:solid black 1px;
-        background-color: rgb(87, 36, 90);        
+        background-color: rgb(87, 36, 90);   
+        display: flex;
+        flex-wrap: wrap;     
+    }
+    #contentitems p {
+        margin: auto;
     }
 
     /* pop-up styling */
@@ -187,7 +205,7 @@ permalink: /govkg
         <p>We've thought up a series of GovKG Use Cases that are based on our experience with the questions people often ask of government structure and function. Please <a href="/contact">Contact Us</a> if you'd like the full listing.</p>
     </div>
     <div style="grid-row:2; grid-column:1;">
-        <img src="images/govkg-reapportionment.png" style="height:165px;" alt="GovKG reapportionment" />
+        <img class="largeBadge" src="images/govkg-reapportionment.png" style="height:165px;" alt="GovKG reapportionment" />
     </div>
 </div>
 
@@ -196,7 +214,7 @@ permalink: /govkg
         <h3>Content Types</h3>
     </div>
     <div style="grid-row:2; grid-column:1;">
-        <img src="images/govkg-themes.png" style="height:350px;" alt="GovKG themes" />
+        <img class="largeBadge" src="images/govkg-themes.png" style="height:350px;" alt="GovKG themes" />
     </div>
     <div style="grid-row:2; grid-column:2;">
         <h4>Types of data</h4>

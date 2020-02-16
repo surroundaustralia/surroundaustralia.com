@@ -1,4 +1,114 @@
 <style>
+    /*Mobile styles*/
+
+    @media (max-width: 1000px) {
+        /*Format*/
+
+        #nav-container{
+            display: none;
+        }
+        .deskID{
+            display: none;
+        }
+        .mnav{
+            display:block!important;
+        }
+
+        #header{
+            display: block!important;
+        }
+        /*Func*/
+
+        .multi-level, .item ul, .mnav input[type="checkbox"] {
+            display: none;
+        }
+        #menu:checked ~ .multi-level, .item input:checked ~ ul {
+            display: block;
+        }
+        /*Arrow*/
+
+        .arrow {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            float: left;
+            z-index: 0;
+            margin: 26px 1em 0 2em;
+        }
+        .item input + .arrow {
+            transform: rotate(-90deg);
+            transition: 0.1s;
+        }
+        .item input:checked + .arrow {
+            transform: rotate(0deg);
+            transition: 0.1s;
+        }
+        /*Styles*/
+
+        .mobID{
+            vertical-align: middle;
+        }
+        #mLogoA{
+            color: transparent;
+        }
+        .multi-level a{
+            text-decoration: none;
+            color:rgb(100, 100, 100);
+        }
+        .mobMenuSingles{
+            padding-left: 80px!important;
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+        label {
+            width: 100%;
+            display: block;
+            z-index: 3;
+            position: relative;
+        }
+        .mnav {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: white;
+            overflow-x: hidden;
+            border-bottom: 1px solid #CFD8DC;
+        }
+
+        #mnav-icon {
+            font-size: 80px;
+            line-height: 50px;
+            padding-left: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        .mnav ul, .mnav li, label, .mobMenuSingles {
+            line-height: 80px;
+            margin: 0;
+            padding: 0 2em;
+            list-style: none;
+            text-decoration: none;
+            width: 100%;
+            text-decoration: none;
+        }
+        .item ul {
+            padding: 0 0.25em;
+        }
+        .mnav li a {
+            line-height: 50px;
+            margin: 0;
+            padding: 0 4em;
+            list-style: none;
+            text-decoration: none;
+        }
+    }
+    /*Desktop Styles*/
+    .mnav{
+        display: none;
+    }
     #header {
         grid-area: header;
         display: grid;
@@ -50,6 +160,8 @@
         float:none;
         display:list-item;
         position: relative;
+        background-color: white;
+        z-index: 3;
     }
     nav ul ul ul li {
         position: relative;
@@ -59,16 +171,7 @@
     li > a:only-child:after { 
         content: ''; 
     }
-</style>
-<div id="header">
-    <div style="grid-column:2;">
-        <a href="https://surroundaustralia.com">
-            <img id="surround-logo" src="images/SURROUND-logo-trans.png" alt="SURROUND logo" style="height: 100px;" />
-        </a>
-    </div>
-    <div style="grid-column:3;">
-        <style>
-            #company-title-s {
+    #company-title-s {
                 color: rgb(50, 50, 50); 
                 font-size: 35px;
                 font-weight: 800;
@@ -80,11 +183,20 @@
                 font-weight: bold;
                 text-decoration: none;
             }
-        </style>
-        <a id="company-title-s" href="https://surroundaustralia.com">
+</style>
+
+<!--HTML-->
+<div id="header">
+    <div class="deskID" style="grid-column:2;">
+        <a href="https://surroundaustralia.com">
+            <img id="surround-logo" src="images/SURROUND-logo-trans.png" alt="SURROUND logo" style="height: 100px;" />
+        </a>
+    </div>
+    <div style="grid-column:3;">
+        <a id="company-title-s" class="deskID" href="https://surroundaustralia.com">
             SURROUND
         </a>
-        <a id="company-title-a" href="https://surroundaustralia.com">
+        <a id="company-title-a" class="deskID" href="https://surroundaustralia.com">
             Australia
         </a>
     </div>
@@ -128,5 +240,64 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
         </nav>
+    </div>
+    <!--Mobile menu-->
+    <div class="mnav">
+        <input type="checkbox" id="menu"/>
+        <label for="menu" id="mnav-icon">
+            <a id="hamburger" style="vertical-align: middle;">&#9776;</a>
+            <a id="mLogoA" href="https://surroundaustralia.com">
+                <img id="surround-logo" class="mobID" src="images/SURROUND-logo-trans.png" alt="SURROUND logo" style="height: 100px;" />
+            </a>
+            <a id="company-title-s" class="mobID" href="https://surroundaustralia.com">
+                SURROUND
+            </a>
+            <a id="company-title-a" class="mobID" href="https://surroundaustralia.com">
+                Australia
+            </a>
+        </label>
+        
+        
+        <div class="multi-level">
+            <div class="item">
+                <input type="checkbox" id="A"/>
+                <img src="images/Arrow.png" class="arrow"><label for="A"><a href="/solutions">Solutions</a></label>
+                
+                <ul>
+                    <li><a href="/consulting">Consulting</a></li>
+                    <li><a href="/casestudies">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="B"/>
+                <img src="images/Arrow.png" class="arrow"><label for="B"><a href="/products">Products</a></label>
+                
+                <ul>
+                    <li><a href="/sort">SORT Robot</a></li>
+                    <li><a href="/govkg">GovKG</a></li>
+                    <li><a href="/acbt">ACBT</a></li>
+                    <li><a href="/sop">SOP</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="C"/>
+                <img src="images/Arrow.png" class="arrow"><label for="C"><a href="/tech">Technology</a></label>
+                
+                <ul>
+                    <li><a href="/consulting">Consulting</a></li>
+                    <li><a href="/sop">SOP</a></li>
+                    <li><a href="/kaas">KaaS</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="D"/>
+                <a class="mobMenuSingles" href="/about">About</a>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="E"/>
+                <a class="mobMenuSingles" href="/contact">Contact Us</a>
+            </div>
+        </div>
+        
     </div>
 </div>

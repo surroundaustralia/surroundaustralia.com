@@ -14,33 +14,38 @@ Our KaaS - see [Illumin](/illumin) - accesses our [Knowledge Graphs](https://en.
 A KaaS give you *knowledge*, as opposed to just *data* or *information*, which you can use directly or with your own information. It presents data definitions, terminology, data associations and learned experience which provide more than just the facts of data or information: you understand what the information's about, what it can tell you and how well you can trust it. 
 
 <style>
-.tooltip {
-  position: relative;
-  display: inline;
-  border-bottom: 1px dotted black;
-}
+    @media (max-width: 1000px) {
+        #contentDiv, #ucs {
+            display: block!important;
+        }
+    }    
+    .tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted black;
+    }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
 </style>
-<div style="display:grid; grid-template-columns: 1fr 1fr;">
+<div id="contentDiv" style="display:grid; grid-template-columns: 1fr 1fr;">
     <div style="text-align:center;">
-        <a href="images/KaaS.svg"><img src="images/KaaS.svg" style="width:400px" /></a><br />
+        <a href="images/KaaS.svg"><img class="largeBadge" src="images/KaaS.svg" style="width:400px" /></a><br />
         <span style="font-size:small;">An overview of SURROUND's <a href="/illumin">Illumin</a> KaaS and its underlying resources.</span>
     </div>
     <div>
