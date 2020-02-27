@@ -5,3 +5,7 @@ _site
 vendor
 
 .DS_Store
+
+# Visual Studio Code config
+.vs/
+
