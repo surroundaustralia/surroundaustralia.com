@@ -16,7 +16,9 @@ permalink: /
         display: block;
         }
         body #highlight-content {
+            position: relative;
             width: 96%;
+            height: 325;
             grid-template-columns: auto;
             top: 7%;
         }
@@ -89,7 +91,7 @@ permalink: /
         grid-template-columns: 1fr 400px 780px 1fr ;
         column-gap: 10px;
         color: white;
-        height:250px;
+        height:275px;
         padding:20px;
     }
     #highlight-content h3 {
@@ -99,8 +101,11 @@ permalink: /
         letter-spacing: 2px;
         font-size: 16px
     }
-    #highlight-content ul {
+    #highlight-content-pdf {
         list-style-image: url('images/icon-pdf-small.png');
+    }
+    #highlight-content-link {
+        list-style-image: url('images/link.png');
     }
     #highlight-content a {
         color: white;
@@ -139,6 +144,7 @@ permalink: /
         color: rgb(87, 36, 90);
     }
 </style>
+<div id="highlight">
 <span id="highlight-content">
     <div style="grid-column:2;" style="text-align: center;">
         <!--
@@ -147,7 +153,7 @@ permalink: /
         </a>
         -->
         <a href="/files/SORT-PoC-PRESS-RELEASE-Feb-2020.pdf" style="text-decoration:none;" />
-            <img src="images/sort-pr-rotated.png" />
+            <img src="images/sort-pr-rotated.png" style="height: 280px;" />
         </a>        
     </div>
     <div style="grid-column:3; text-align:justify;">
@@ -155,7 +161,8 @@ permalink: /
             SURROUND WINS DEPT OF INNOVATION, INDUSTRY & SCIENCE CHALLENGE TO CLASSIFY
 ELECTRONIC RECORDS
         </h3>
-        <h3><ul><li><a href="/files/SORT-PoC-PRESS-RELEASE-Feb-2020.pdf">Read the Press Release</a></li></ul></h3>
+        <h3><ul id="highlight-content-pdf"><li><a href="/files/SORT-PoC-PRESS-RELEASE-Feb-2020.pdf">Read the Press Release</a></li></ul></h3>
+        <h3><ul id="highlight-content-link"><li><a href="https://www.minister.industry.gov.au/ministers/karenandrews/media-releases/businesses-share-6-million-tackle-national-challenges">Minister's Announcement</a></li></ul></h3>
         <!--
         <h4>
             The <a href="/sop" style="color:white;">SURROUND Ontology Platform (SOP)</a> is an industry-leading knowledge graph managment tool.
@@ -169,7 +176,7 @@ ELECTRONIC RECORDS
         -->
     </div>    
 </span> 
-<div id="highlight">
+
 
 </div>
 <div id="solutions">
