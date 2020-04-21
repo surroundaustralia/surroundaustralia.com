@@ -1,4 +1,4 @@
-# SURROUND Website
+# SURROUND Website!
 This is the source code for the SURROUND website at https://surroundaustralia.com. It is a Jekyll website so that the files you see here are not ready for deployment to a web server but are source code that Jekyll compiles into the static HTML, image & CSS files that can then be deployed. Files compiled are stored in the _site/ subfolder which isn't included in the version control so much be rebuilt from source as needed.
 
 ## Jekly commands
