@@ -9,21 +9,26 @@ permalink: /believe
 
 Some of these beliefs are about what we should be doing, others about how to do it.
 
+Above all else we think "do no evil" is not good enough, we prefer "do good"!
+
 <img src="images/fork-in-road.png" style="float:right;" />
 
 ### What to do
-We do what we believe in and that is:
+Based on our beliefs, SURROUND acts in these ways:
 
-1. **Working for the public good**
+1. **Working for community wellbeing**
   * improving the welfare of Australians is a primary goal of SURROUND's
   * providing for the greater utilisation of public knowledge assets 
   * increasing the transparency and accountability for all Governments
-  * "do no evil"'s not good enough, how about "do good"?
+  * our work delivers improvements to peoples lives
 
-2. **Assisting government to govern**
+2. **Bringing knowledge to decision processes**
   * small tech copmanies can assist government to govern by doing things government can't, such as addressing fast-moving technical challenges agilely
   * pooling skills quickly for xAI (see below), Machine Learning and Semantic Knowledge Graphs
-  * whatever we do should be *with* government, not against it!
+
+3. **Capture the changing state of knowledge** 
+  * provenance captured for all our systems and datasets
+  * knowledge assets' usage metrics captured for optimisation
 
 <img src="images/how-we-do-it.png" style="float:right;" />
 
