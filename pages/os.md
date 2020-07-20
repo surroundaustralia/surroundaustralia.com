@@ -25,7 +25,7 @@ We also provide both consulting on the use of the core [RDFlib]() library itself
 
 <div style="text-align:center;">
     <a href="https://github.com/rdflib/rdflib" style="text-decoration:none;">
-        <img src="images/logo-RDFlib.png" style="height:150px;" />
+        <img src="images/logo-rdflib.png" style="height:150px;" />
     </a>
 </div>
 
