@@ -90,32 +90,66 @@ permalink: /sort
         <div style="grid-column:1; text-align: left;">
             <p>The SORT Robot uses a combination of advanced artificial intelligence, semantics, and machine learning techniques to:</p>
             <ul>
-                <li>Convert electronic record triaging criteria into machine-readable, executable rules which are used to auto-classify electronic records.</li>
-                <li>Automate record classification and support record discovery using tagging, faceted search, topic mapping, contextual analysis, deep semantic analysis, machine learning techniques, and other techniques, within an extensible, re-configurable framework.</li>
-                <li>Incorporate feedback on auto-classification results to improve classification methods, and the classification process as a whole. SORT learns the experienced judgments of professional archivists, increase accuracy over time.</li>
+                <li>Characterise electronic records with Semantic metadata</li>
+                <li>
+                    Execute classification rules against the Records - the rules themselves are managed as reference data
+                    <ul>
+                        <li>Different Record content and metadata analyses are performed to them test classification rules against</li>
+                    </ul>
+                </li>
+                <li>Incorporate feedback on classification results to improve methods
+                    <ul>
+                        <li>Both supervised and un-supervised Machien Learning takes place in the Robot</li>
+                    </ul>
+                </li>
+                <li>
+                    Track provenance of all classifications and system executions to preserve decision transparency
+                </li>
             </ul>
         </div>
         <div style="grid-column:2; text-align: center;">
             <h3>How does it work?</h3>
             <img src="images/sort-grader.png" style="width:300px;" />
         </div>
-
     </div>
     <div>
         <div style="grid-column:1; text-align: center;">
             <h3>Technology base</h3>
+            <img src="images/icon-graphql.png" style="height:150px;" />
             <img src="images/icon-rdf.png" style="height:150px;" />
-            <img src="images/sort-ml.png" style="height:150px;" />
+            <img src="images/sort-ml.png" style="height:200px;" />
             <h4>
-                Semantics + ML
+                Common APIs, Semantics + ML
             </h4>
         </div>
         <div style="grid-column:2;">
-            <p>
-                SURROUND has built the SORT Robot capability as a flexible, extensible, and configurable application, a platform with proven scalability: the SURROUND Ontology Platform (SOP). The SOP uses a World Wide Web Consortium (W3C) standard, Resource Description Framework (RDF) graphs, as its base information representation. The SOP is constructed from a suite of components, which have been flexibly combined to create a coherent knowledge graph of triaging rules, record context, and record instances within SORT. Workflows help archivists optimise the application of rules, and the assimilation of knowledge and automated processes to improve the SORT Robot’s performance over time. The technology base and methods used by SORT enable significantly improved performance to those achieved by existing electronic record auto-classification systems.
+            <!--<p>SURROUND has built the SORT Robot capability as a flexible, extensible, and configurable application. It sorts things and can be tuned to sort different things according to different categorisation requirements. 
+            </p>-->
+            <h4>Data</h4>
+            <p>The SORT Robot stores both data generated and reference data used in sorting as Semantic Web knowledge graphs. It uses the <a href="/sop">SURROUND Ontology Platform</a> to manage the multi-part reference data knowledge graphs relevant to a sorting scenario.</p>
+            <p>System actions and generated data are have <em>provenance</em> recorded using the <a href="http://www.w3.org/TR/prov-dm/">PROV Data Model</a> standard. This ensure maximal operating transparency</p>
+            <a href="http://www.w3.org/TR/prov-dm/"><img src="images/logo-prov-dm.png" alt="PROV Data Model" /></a> - used by the SORT Robot
+            <h4>System access</h4>
+            <p>The Robot accesses reference data and also presents interfaces for down-stream systems via a cutting-edge <a href="https://graphql.org/">GraphQL</a> API as well as other specialised APIs, such as <a href="https://www.w3.org/TR/sparql11-protocol/">SPARQL Endpoints</a>. This means it can be meshed into multi-part systems quite easily.</p>
             </p>
         </div> 
+        <div  style="grid-column:1/3;">
+            <h4>Learning</h4>
+            <p>The SORT Robot incorporates several <em>machine learning</em> scenarios operating at different conceptual levels that together allow a Robot deployment to improve its performance over time. The Robot can "learn" what better results look like from human feedback, it can "learn" what more efficient part-classifications of records look like and it by correlating reference data and results. It an also learn about drifiting result trends by re-examining its processing history which is preserved in a comprehensive provenance trace.</p>
+            <p>The SORT Robot's ML scenarios all read from and write back to <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">RDF Knowledge Graphs</a> and all learnign is tracked using the <a href="http://www.w3.org/TR/prov-dm/">PROV Data Model</a>. Using a very flexible and yet stadards-based data model for ML means we can adapt the learning schenarios per-application and present decisions made in easy to understand ways (i.e. not secret info!) if required to demonstrate ML traceability.</p>
+        </div>
     </div>   
+    <div style="background-color:rgb(238, 238, 238);">
+        <div style="grid-column:1; text-align: left;">
+            <p>The SORT Robot can be adapted to classifying any kind of digital asset.</p>
+            <p>The particular record (asset) reading functiosn can be adapted for your dta types and the you can specify the classifications that you want to see records sorted according to. We can build up a collection of reference data as structured Knowledge Graphs that represent the knolwedge in your domain so that the SORT Robot can operate as your human expers do.</p>
+            <p>Whatever the deployment scenario: the SORT Robot will always track all decsions and learning made using standardised provenance so that you have auditable outcomes.</p>
+        </div>
+        <div style="grid-column:2; text-align: center;">
+            <h3>Adapting SORT for your needs</h3>
+            <img src="images/sort-for-you.png" style="width:400px;" />
+        </div>
+    </div>
 </div>
 
-<p>Please email <info@surroundaustralia.com> to arrange a demo or further information.</p>
+<h4>Please <a href="/contact">Contact Us</a> to arrange a demo or further information.</h4>
