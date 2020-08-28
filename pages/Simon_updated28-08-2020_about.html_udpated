@@ -1,0 +1,122 @@
+---
+layout: page
+title: About
+permalink: /about
+---
+<h1>About</h1>
+<p>SURROUND is an Australian technology company that develops advanced software systems and supplies consulting services.</p>
+<p>Our forté is in working with complex, multi-dimensional data. Collectively we have over a century of software and data architecture, design and operations experience.</p>
+<p>Are staff include seasoned veterans of Australian government IT and international technology giants as well as internationally-renowned Semantic Web, spatial data and machine reasoning and conceptual modelling experts.</p>
+
+<h2>Our Team</h2>
+<style>
+    @media (max-width: 1000px) {
+        .gcontentitems > div {
+            display: block!important;
+        }
+        .mobPerson{
+            float: none!important;
+            width: 35%;
+            height: auto!important;
+        }
+    }  
+    .gcontentitems {
+        display: grid;
+    }
+
+    .gcontentitems > div {
+        align-self: center; 
+        text-align: justify;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        padding: 30px;
+    }
+
+    .gcontentitems > div > div > img {
+        margin: 0 0 10px 10px;
+    }
+
+    .jobtitle {
+        color: rgb(87, 36, 90);
+    }
+</style>
+<div class="gcontentitems">
+    <div>        
+        <div style="grid-column:1;" id="brad">
+            <img class="mobPerson" src="images/person-brad.jpg" style="float:right; height:200px;">
+            <h4>Dr Brad McCusker</h4>
+            <p class="jobtitle">CEO &amp; Founder</p>
+            <p>Brad has a background as an enterprise architect, accountant, and ICT consultant. Before co-founding SURROUND, he worked as a senior enterprise architect with Accenture, IBM Global Services, IBM Business Consulting Group, IBM Japan, and CSC Australia. Brad has also worked in various senior architectural and consulting roles with ING Australia, the Australian and New Zealand Bank, the Department of Health, the Australian Treasury, the Department of Social Services, and the Department of Human Services. Brad is a visiting fellow at the ANU.</p>
+        </div>        
+        <div style="grid-column:2;" id="marcus">
+            <img class="mobPerson" src="images/person-marcus.jpg" style="float:right; height:200px;">
+            <h4>Marcus Jowsey</h4>
+            <p class="jobtitle">Executive Director &amp; Founder</p>
+            <p>Prior to co-founding SURROUND, Marcus has held positions as senior consultant for Dialog, development manager for APIR Systems, and applications developer for ThoughtWeb. He was a senior architect with the Department of Human Services, the Department of Social Services, the Department of Environment, and the Department of Health. Marcus also assists DXC Technology and the Australian Tax Office with architecture for applications and integration. Before moving seamlessly into the software engineering space in 2008, Marcus worked as a commercial oilfield diver in the North Sea and Asia, running a successful marine engineering company building onshore marine facilities.</p>
+        </div>
+    </div>
+    <div>
+        <div style="grid-column:1;" id="nick">
+            <img class="mobPerson" src="images/person-nick.jpg" style="float:right; height:200px;">
+            <h4>Dr Nicholas Car</h4>
+            <p class="jobtitle">Data Systems Architect</p>
+            <p>Nicholas’ main experience is in building distributed data systems for government. For 15 years (on and off) he worked at CSIRO and, most recently, was the design lead for several innovative Linked Data and Semantic Web projects including the <a href="http://locationindex.org">Location Index</a> spine and <a href="https://longspine.cat/">Longitudinal Spine of Government Functions</a>. They aim to provide collections of integrated, reference Australian government datasets allowing for data integration.</p>
+            <p>He has also worked as the Data Architect of Geoscience Australia, advising on agency-wide data systems and managing technical and data policy teams.</p>
+            <p>Currently, Nicholas is active as a web standards editor in the <a href="https://www.w3.org/2017/dxwg/wiki/Main_Page">W3C’s Dataset Exchange Working Group</a>, a co-chair of the <a href="http://www.linked.data.gov.au">Australian Government Linked Data Working Group</a>, and a member of the <a href="https://www.isotc211.org">ISO's TC 211</a>, Technical Committee for the geographic standards information.</p>
+        </div>
+        <div style="grid-column:2;" id="rob">
+            <img class="mobPerson" src="images/person-rob.jpg" style="float:right; height:200px;">
+            <h4>Rob Atkinson</h4>
+            <p class="jobtitle">Lead Ontologist</p>
+            <p>Rob has a background in integrating data in a wide variety of distributed systems. He has lectured in Computing Science and Geographic Information Systems, and has been a pioneer of delivery of spatial data on the Web, working with and developing Open Geospatial Consortium and W3C standards. In the last decade, his focus has been on data modelling and semantic mapping as part of hybrid Linked Data, Semantic Web, service-oriented and data warehouse architectures. Rob has been active in improving methodologies for sharing semantic knowledge across enterprise boundaries, and in the development of standards. He has mentored several international subject domain communities such as Geoscience, Marine, Aviation and Hydrology in data modelling, and model-driven architecture techniques. Rob is currently active in the W3C Data Exchange Working Group.</p>
+        </div>
+    </div>
+    <div>
+        <div style="grid-column:1;" id="david">
+            <img class="mobPerson" src="images/person-david.jpg" style="float:right;">
+            <h4>David Habgood</h4>
+            <p class="jobtitle">Analyst Programmer</p>      
+            <p>David comes from a background of Analyst and Architect roles in Government at Services Australia (formerly the Department of Human Services), and the Department of Defence. He is interested in how linked information and associated tools can lead to better decisions, particularly in Government. Outside of Government he has worked in and maintains an interest in Climate and Energy-related information.</p>
+        </div>        
+        <div style="grid-column:2;" id="simon">
+            <img class="mobPerson" src="images/person-simon.png" style="float:right; height:200px;" />
+            <h4>Simon Opper</h4>
+            <p class="jobtitle">Chief Data Scientist</p>
+            <p>Simon is Chief Data Scientist. He also manages technical aspects of projects with clients including solution design. Simon excels at communicating with customers about their business needs and technical requirements and in bridging the gap to the technology design and implementation. Simon’s skills in the socio-technical and organisational aspects of knowledge management from a career in data driven Government and Engineering Consulting roles brings significant clarity and grounding to solving problems with highly technical solutions. Simon blends semantic implementation approaches from a mix of viewpoints aimed at pragmatic and rapid results right through to extensive system control and governance.</p>
+        </div>
+    </div>
+    <div>
+        <div style="grid-column:1;" id="shirley">
+            <img class="mobPerson" src="images/person-shirley.png" style="float:right; height:150px;">
+            <h4>Professor Shirley Gregor</h4>
+            <p class="jobtitle">Advisor for: Knowledge as a Service</p>
+            <p>Shirley is the foundation Professor of Information Systems at the Australian National University, where she is a Director of the National Centre for Information Systems Research. Prof. Gregor has led several large applied research projects funded by the Meat Research Corporation, the Department of Communications, Information Technology and the Arts, the Australian Research Council, and AusAID.</p>
+        </div>
+        <div style="grid-column:2;" id="dion">
+            <img class="mobPerson" src="images/person-dion.png" style="float:right; height:200px;">
+            <h4>Dion Walder</h4>
+            <p class="jobtitle">Ontology Platform Engineer</p>
+            <p>Dion is an experienced infrastructure and application integration engineer. His role is to handle production promotion through the continuous integration process, and to assist customers with technical on-boarding.  He is also responsible for providing the evidence and traceability between the results from the SURROUND platform and our customers' business goals. This is to ensure the highest degree of business alignment, and a rapid feedback cycle to address any gaps.</p>
+        </div>
+    </div>     
+    <div>
+        <div style="grid-column:1;" id="alejandro">
+            <img class="mobPerson" src="images/person-alejandro.jpg" style="float:right;">
+            <h4>Alejandro Diaz Santos</h4>
+            <p class="jobtitle">Software Developer</p>
+            <p>Alejandro started his programming career in the early years of studying for his degree in Aeronautical Engineering. He has since focussed on AI, and has worked as a Python developer and ML engineer for 4+ years. Alejandro used his Python expertise in Altran's R&D department to develop thermodynamic simulations. Subsequently, he worked with BBVA (one of the foremost financial institutions in Spain and South America) to design and develop new intelligence features to improve the bank's customer support platform.</p>  
+        </div>        
+        <div style="grid-column:2;" id="simon-t">
+            <img class="mobPerson" src="images/person-simon-t.jpg" style="float:right;">
+            <h4>Simon Thompson</h4>
+            <p class="jobtitle">Analyst</p>
+            <p>Simon is an analyst. He has over 20 years in ICT roles including designer, architect, programmer, tester, and manager. Having completed a Masters in Business Information Systems at ANU, he enjoys giving back to the industry by teaching at the ANU and the UC in a variety of business and ICT subjects. With over 15 years in Federal Government technology and information roles, he has a long term interest in the way that governments manage the information of all Australians.</p>
+        </div>        
+    </div>
+</div>
+
+<h2>Our Story</h2>
+<p>In 2015, SURROUND's two founders (Brad McCusker and Marcus Jowsey) set out to transform the way government and business work.</p>
+<p>Our focus is linking knowledge in order to assist organisations to make improved empirical, traceable, and explainable decisions. The SURROUND team has created an integrated knowledge engineering platform using semantic, knowledge graph, and machine learning (ML) technologies.</p>
+<p>SURROUND's core mission is to provide value to our customers and the broader citizen community by providing government agencies and business with cost-effective solutions which address and solve organisational complexity. Our solutions leverage global standards and world-class algorithms in the design of generic or customised solutions as required.</p>
