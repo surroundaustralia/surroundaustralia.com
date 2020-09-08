@@ -7,7 +7,7 @@ permalink: /catprez
 
 CatPrez is the Catalogue Presentation tool - a read-only Linked Data interface for the online delivery of Data Catalog Vocabulary (DCAT) - Version 2 catalogs.
 
-CatPrez is one of the the only, perhaps *the* only, DCAT2-native catalogue.
+CatPrez is one of the only, perhaps *the* only, DCAT2-native catalogue.
 
 It is based on the [pyLDAPI](https://github.com/rdflib/pyLDAPI) toolkit that implements the [Content Negotiation by Profile](https://w3c.github.io/dx-connegp/connegp/) W3C & IETF candidate standard for Internet-based content retrieval according to data specifications (*profiles*).
 
@@ -35,8 +35,8 @@ It is based on the [pyLDAPI](https://github.com/rdflib/pyLDAPI) toolkit that imp
 CatPrez is used for two domain catalogues: 
 
 1. [Profiles Catalogue](https://profcat.conneg.info) - a general-purpose catalogue of *profiles*, that is, specifications defined according to the [Profiles Vocabulary](https://w3c.github.io/dx-prof/prof/)
-2. [DGGS Catalogue](https://cat.dggs.org) - a listing of information assets relevant to the [OGC](https://www.ogc.org) 's [Testbed 16 Discrete Gloabl Grid](https://portal.ogc.org/files/?artifact_id=91644#DGGS) experiments
+2. [DGGS Catalogue](https://cat.dggs.org) - a listing of information assets relevant to the [OGC](https://www.ogc.org) 's [Testbed 16 Discrete Global Grid](https://portal.ogc.org/files/?artifact_id=91644#DGGS) experiments
 
 ## I want it!
 
-Instances of CatPrez can be deployed for prectically any cataloguing purpose. Please [Contact Us](/contact) to find out more.
+Instances of CatPrez can be deployed for practically any cataloguing purpose. Please [Contact Us](/contact) to find out more.
