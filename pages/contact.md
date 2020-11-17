@@ -20,7 +20,6 @@ Sydney NSW 2000
 Australia
 
 #### Canberra Office
-Suite 3, 26 Brookman Street  
-Torrens ACT 2607  
-Australia
-
+Level 9, Nishi Building  
+2 Phillip Law Street  
+Canberra ACT 2601  
