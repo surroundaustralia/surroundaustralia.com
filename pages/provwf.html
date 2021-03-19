@@ -1,0 +1,85 @@
+---
+layout: page
+title: "ProvWF"
+permalink: /provwf
+---
+<img src="images/logo-provwf.png" alt="ProvWF logo" style="float:right;" />
+<h1>ProvWF</h1>
+<h2>SURROUND's general-purpose provenance workflow tool</h2>
+<p>
+    ProvWF is a Python library we've made to create workflows that track what they do using the standardised <a href="https://www.w3.org/TR/prov-dm/">PROV Data Model (Prov-DM)</a>. We use ProvWF for anything we do that we can wrap in Python which includes:
+</p>
+<ul>
+    <li>Natural Language Processing tasks</li>
+    <li>Machine Learning model traning and use</li>
+    <li>automated calls to our Knowledg Graph products</li>
+    <li>our various APIs' responses to queries</li>
+    <li>custom workflows for projects</li>
+</ul>
+<div style="text-align:center;">
+    <img src="images/provwf-hierarchy.png" style="width:500px; margin-top:20px;" />
+    <p>
+        ProvWF uses a specialised form of the PROV Data Model to capture all aspects<br />of its execution: how it runs and what it produces.
+    </p>
+</div>
+
+<style>
+    @media (max-width: 1000px) {
+        .gcontentitems > div {
+            display: block!important;
+        }
+        
+    }
+    .gcontentitems {
+        display: grid;
+    }
+
+    .gcontentitems > div {
+        align-self: center; 
+        text-align: justify;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        padding: 30px;
+    }
+
+    .gcontentitems2 {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    .gcontentitems2 > div {
+        text-align: center;
+    }
+</style>
+<div class="gcontentitems">
+    <div>
+        <div style="grid-column:1; text-align: center;">
+            <h3>When should you use ProvWF?</h3>
+        </div>
+        <div style="grid-column:2;">
+            <style>
+                ol.bigger li {
+                    line-height: 2em;
+                    margin-top: 20px;
+                }
+            </style>
+            <ol class="bigger">
+                <li><strong>Custom data pipelines</strong> when you want to build custom processing systems and track what they do
+                <li><strong>Server or Client actions</strong> when you want to log server or client actions in a sophisticated way
+                <li><strong>Machine Learning</strong> when you want to track ML training and deployment
+            </ol>
+        </div>
+    </div>
+    <div>
+        <div style="grid-column:1;">
+            <p>
+                Of course! ProvWF pipelines produce provenance information that can be absorbed by our <a href="/sop">SURROUND Ontology Platform</a> so that you can use SOP to query and visualise ProvWF results.
+            </p>
+        </div>
+        <div style="grid-column:2; text-align: center;">
+            <h3>Does it integrate with other SURROUND systems?</h3>
+        </div>
+    </div>  
+</div>
