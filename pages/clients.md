@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "Clients"
-permalink: /clients
+permalink: clients
 ---
 # Clients

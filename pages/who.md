@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "Who"
-permalink: /who
+permalink: who
 ---
 # Who

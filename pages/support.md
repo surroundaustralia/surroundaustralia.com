@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "Support"
-permalink: /support
+permalink: support
 ---
 # Support

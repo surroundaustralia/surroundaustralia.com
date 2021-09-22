@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CatPrez"
-permalink: /catprez
+permalink: catprez
 ---
 # CatPrez
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ACBT"
-permalink: /acbt
+permalink: acbt
 ---
 <img src="images/icon-acbt.png" alt="SOP icon" style="height:200px; float:right;" />
 # ACBT

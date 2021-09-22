@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Case Studies"
-permalink: /casestudies
+permalink: casestudies
 ---
 # Case Studies
 

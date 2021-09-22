@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "LUCA"
-permalink: /luca
+permalink: luca
 ---
 # LUCA

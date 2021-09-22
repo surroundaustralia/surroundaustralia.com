@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Consulting"
-permalink: /consulting
+permalink: consulting
 ---
 # Consulting
 

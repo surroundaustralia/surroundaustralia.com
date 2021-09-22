@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Products"
-permalink: /products
+permalink: products
 ---
 <img src="images/icon-products.png" alt="Products icon" style="height:200px; float:right; background-color: white; margin-left:30px;" />
 # Products

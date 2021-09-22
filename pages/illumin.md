@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Illumin"
-permalink: /illumin
+permalink: illumin
 ---         
 # Illumin
 

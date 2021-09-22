@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Believe
-permalink: /believe
+permalink: believe
 ---
 # What We Believe
 

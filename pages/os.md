@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Open Source"
-permalink: /os
+permalink: os
 ---
 # Open Source
 

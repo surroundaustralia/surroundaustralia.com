@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Technology"
-permalink: /tech
+permalink: tech
 ---
 # Technology
 ### Focus on data, not systems
