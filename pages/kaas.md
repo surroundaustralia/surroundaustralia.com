@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "KaaS"
-permalink: /kaas
+permalink: kaas
 ---
 # Knowledge as a Service (KaaS)
 
